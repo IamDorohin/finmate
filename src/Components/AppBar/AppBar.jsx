@@ -24,7 +24,7 @@ export const AppBar = () => {
     setShowModal(!showModal);
   };
 
-  const activatedLogoLinkHandler = () => {
+  const activatedLinkHandler = () => {
     setShowModal(false);
   };
 
@@ -33,10 +33,13 @@ export const AppBar = () => {
     <AppHeader>
       {/* <MobileMenuHeaderContainer> */}
       <AppHeaderContainer>
-        <AppLogo onClick={activatedLogoLinkHandler} />
+        <AppLogo onClick={activatedLinkHandler} />
         {showModal && (
           <Modal>
-            <UserMenuMobile onClick={changeModalStatusHandler} />
+            <UserMenuMobile
+              onClick={changeModalStatusHandler}
+              onLinkClick={activatedLinkHandler}
+            />
           </Modal>
         )}
         {closedMobileMenu ? (

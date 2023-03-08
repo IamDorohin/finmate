@@ -3,7 +3,7 @@ import { Layout } from 'Components/Layout/Layout';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { changeDeviceType } from 'Redux/Device/slice';
-import { Balance } from 'Pages/Balance/Balance';
+import { BalancePage } from 'Pages/BalancePage/BalancePage';
 import './App.css';
 
 export const App = () => {
@@ -26,7 +26,7 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/balance" element={<Balance />}></Route>
+        <Route path="/balance" element={<BalancePage />}></Route>
       </Route>
     </Routes>
   );

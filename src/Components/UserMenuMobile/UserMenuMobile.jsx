@@ -24,7 +24,7 @@ const menuItemsContent = [
   { href: 'stocks', text: 'Stocks' },
 ];
 
-const UserMenuMobile = ({ onClick }) => {
+const UserMenuMobile = ({ onClick, onLinkClick }) => {
   const [settingsSelect, setsSettingsSelect] = useState(false);
   const isSettingsCard = settingsSelect === true;
 
@@ -50,7 +50,9 @@ const UserMenuMobile = ({ onClick }) => {
       <UserMenuList>
         {menuItemsContent.map(({ href, text }) => (
           <UserMenuItem key={text}>
-            <UserMenuLink to={href}>{text}</UserMenuLink>
+            <UserMenuLink to={href} onClick={() => onLinkClick()}>
+              {text}
+            </UserMenuLink>
           </UserMenuItem>
         ))}
       </UserMenuList>

@@ -1,0 +1,8 @@
+[
+  { "title": "Mono bank", "amount": 100000 },
+  { "title": "Cash", "amount": 100000 },
+  { "title": "Ukrsib", "amount": 100000 },
+  { "title": "Pryvat bank", "amount": 100000 },
+  { "title": "Ощадбанк", "amount": 100000 },
+  { "title": "Збереження", "amount": 100000 }
+]
