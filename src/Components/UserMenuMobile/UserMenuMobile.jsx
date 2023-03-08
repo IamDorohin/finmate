@@ -17,6 +17,7 @@ import { UserProfileCard } from 'Components/UserProfileCard/UserProfileCard';
 import { SettingsCard } from 'Components/Common/SettingsCard/SettingsCard';
 import { SettingsButton } from 'Components/Buttons/SettingsButton/SettingsButton';
 import { LogoutButton } from 'Components/Buttons/LogoutButton/LogoutButton';
+import { themeSelector } from 'Redux/selectors';
 import { VscChromeClose } from 'react-icons/vsc';
 
 const menuItemsContent = [
@@ -29,14 +30,16 @@ const UserMenuMobile = ({ onClick }) => {
   const [settingsSelect, setsSettingsSelect] = useState(false);
   const isSettingsCard = settingsSelect === true;
 
-  const currentAppTheme = useSelector(state => state.theme);
+  const currentAppTheme = useSelector(themeSelector);
+  console.log('currentAppTheme', currentAppTheme);
+  console.log('changeAppTheme', changeAppTheme);
   const dispatch = useDispatch();
 
   const themeChangeHandler = () => {
     if (currentAppTheme === 'light') {
-      dispatch(changeAppTheme('dark'));
+      dispatch(changeAppTheme({ value: 'dark' }));
     } else {
-      dispatch(changeAppTheme('light'));
+      dispatch(changeAppTheme({ value: 'light' }));
     }
   };
 

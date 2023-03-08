@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from 'Redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+
+import { store, persistor } from 'Redux/store';
 import './index.css';
 import { App } from './Components/App';
 // import reportWebVitals from './reportWebVitals';
@@ -12,7 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/finmate">
       <Provider store={store}>
-        <App />
+        <PersistGate loading={null} persistor={persistor}>
+          <App />
+        </PersistGate>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

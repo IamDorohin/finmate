@@ -7,9 +7,11 @@ import {
   ThemeSwitcherStars,
   ThemeSwitcherButton,
 } from './ThemeSwitcher.styled';
+import { themeSelector } from 'Redux/selectors';
 
 export const ThemeSwitcher = ({ onClick }) => {
-  const currentAppTheme = useSelector(state => state.theme);
+  const currentAppTheme = useSelector(themeSelector);
+
   const isLightTheme = currentAppTheme === 'light';
 
   return (

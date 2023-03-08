@@ -6,12 +6,14 @@ import { MobileMenuHeaderContainer } from 'Components/UserMenuMobile/UserMenuMob
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { Modal } from 'Components/Common/Modal/Modal';
+import { deviceSelector } from 'Redux/selectors';
 import UserMenuMobile from 'Components/UserMenuMobile/UserMenuMobile';
 import { SlMenu } from 'react-icons/sl';
 
 export const AppBar = () => {
   const [showModal, setShowModal] = useState(false);
-  const smartPhoneDevice = useSelector(state => state.smartPhone);
+  const smartPhoneDevice = useSelector(deviceSelector);
+
   console.log('showModal', showModal);
   useEffect(() => {
     if (!smartPhoneDevice) {
