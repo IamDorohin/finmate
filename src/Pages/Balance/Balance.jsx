@@ -1,3 +1,5 @@
+import { HeroSection } from 'Components/BalancePageComponents/HeroSection/HeroSection';
+
 export const Balance = () => {
-  return <p>Balance page</p>;
+  return <HeroSection></HeroSection>;
 };

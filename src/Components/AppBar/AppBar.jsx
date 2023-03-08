@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { AppHeader } from './AppBar.styled';
+import { AppHeader, AppHeaderContainer } from './AppBar.styled';
 import { UserMenu } from 'Components/UserMenu/UserMenu';
-import { MobileMenuHeaderContainer } from 'Components/UserMenuMobile/UserMenuMobile.styled';
+// import { MobileMenuHeaderContainer } from 'Components/UserMenuMobile/UserMenuMobile.styled';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { Modal } from 'Components/Common/Modal/Modal';
@@ -14,7 +14,6 @@ export const AppBar = () => {
   const [showModal, setShowModal] = useState(false);
   const smartPhoneDevice = useSelector(deviceSelector);
 
-  console.log('showModal', showModal);
   useEffect(() => {
     if (!smartPhoneDevice) {
       setShowModal(false);
@@ -32,7 +31,8 @@ export const AppBar = () => {
   const closedMobileMenu = smartPhoneDevice & !showModal;
   return (
     <AppHeader>
-      <MobileMenuHeaderContainer>
+      {/* <MobileMenuHeaderContainer> */}
+      <AppHeaderContainer>
         <AppLogo onClick={activatedLogoLinkHandler} />
         {showModal && (
           <Modal>
@@ -50,7 +50,8 @@ export const AppBar = () => {
         ) : (
           <UserMenu />
         )}
-      </MobileMenuHeaderContainer>
+      </AppHeaderContainer>
+      {/* </MobileMenuHeaderContainer> */}
     </AppHeader>
   );
 };

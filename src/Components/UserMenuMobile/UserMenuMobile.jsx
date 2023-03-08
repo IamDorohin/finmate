@@ -8,10 +8,8 @@ import {
   UserMenuItem,
   UserMenuLink,
 } from 'Components/UserMenu/UserMenu.styled';
-import {
-  MobileMenuHeaderContainer,
-  MobileMenuButtonsContainer,
-} from './UserMenuMobile.styled';
+import { MobileMenuButtonsContainer } from './UserMenuMobile.styled';
+import { AppHeaderContainer } from 'Components/AppBar/AppBar.styled';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { UserProfileCard } from 'Components/UserProfileCard/UserProfileCard';
 import { SettingsCard } from 'Components/Common/SettingsCard/SettingsCard';
@@ -31,8 +29,6 @@ const UserMenuMobile = ({ onClick }) => {
   const isSettingsCard = settingsSelect === true;
 
   const currentAppTheme = useSelector(themeSelector);
-  console.log('currentAppTheme', currentAppTheme);
-  console.log('changeAppTheme', changeAppTheme);
   const dispatch = useDispatch();
 
   const themeChangeHandler = () => {
@@ -45,12 +41,12 @@ const UserMenuMobile = ({ onClick }) => {
 
   return (
     <>
-      <MobileMenuHeaderContainer>
+      <AppHeaderContainer>
         <AppLogo />
         <MobileMenuButton onClick={onClick}>
           <VscChromeClose size={20} color="#000" />
         </MobileMenuButton>
-      </MobileMenuHeaderContainer>
+      </AppHeaderContainer>
       <UserMenuList>
         {menuItemsContent.map(({ href, text }) => (
           <UserMenuItem key={text}>
