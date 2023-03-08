@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/finmate/static/css/main.073c9b0a.css",
+    "main.js": "/finmate/static/js/main.a71a3fbd.js",
+    "index.html": "/finmate/index.html",
+    "main.073c9b0a.css.map": "/finmate/static/css/main.073c9b0a.css.map",
+    "main.a71a3fbd.js.map": "/finmate/static/js/main.a71a3fbd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a71a3fbd.js"
+  ]
+}
