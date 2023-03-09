@@ -8,8 +8,8 @@ export const BalancePage = () => {
     <>
       <HeroSection />
       <PaymentAccountsSection />
-      <InvestmentsSection />
       <DebtsSection />
+      <InvestmentsSection />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { AppBar } from 'Components/AppBar/AppBar';
+import { Footer } from 'Components/Footer/Footer';
 // import { PageContainer } from 'Components/Common/PageContainer/PageContainer';
 
 export const Layout = () => {
@@ -8,6 +9,7 @@ export const Layout = () => {
     <>
       <AppBar />
       <Outlet />
+      <Footer />
     </>
 
     // </PageContainer>

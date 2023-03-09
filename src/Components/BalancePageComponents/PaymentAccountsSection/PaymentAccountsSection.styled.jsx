@@ -16,6 +16,7 @@ export const SectionList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-content: flex-start;
 `;
 
 export const SectionItem = styled.li`

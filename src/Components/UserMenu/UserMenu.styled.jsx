@@ -73,10 +73,14 @@ export const UserMenuItem = styled.li`
 `;
 
 export const UserMenuLink = styled(NavLink)`
+  /* width: 100%;
+  height: 100%; */
   text-decoration: none;
   color: inherit;
 
   &.active {
+    /* border-radius: 10px;
+    background-color: #000; */
     color: #fac507;
   }
 `;

@@ -5,6 +5,17 @@ export const SectionContainer = styled.section`
 `;
 
 export const SectionList = styled.ul`
+  /* list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 16px;
+  height: 124px;
+  align-content: flex-start; */
   /* justify-content: space-between; */
   margin: 0;
   margin-top: 16px;
@@ -16,9 +27,18 @@ export const SectionList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-content: flex-start;
 `;
 
 export const SectionItem = styled.li`
+  /* width: 110px;
+  height: 40px;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  margin-left: 0; */
+
   display: flex;
   align-items: center;
   width: 110px;
@@ -31,9 +51,9 @@ export const SectionItem = styled.li`
   list-style: none;
   background-color: #000;
 
-  /* :nth-last-child(-n + 2) {
+  :nth-last-child(-n + 2) {
     margin-right: 0;
-  } */
+  }
 
   :nth-child(2n) {
     margin-bottom: 0px;

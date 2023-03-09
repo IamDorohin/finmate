@@ -1,5 +1,6 @@
 [
   { "title": "Stocks", "amount": 100000 },
   { "title": "Bussiness", "amount": 100000 },
-  { "title": "Real estate", "amount": 100000 }
+  { "title": "Real estate", "amount": 100000 },
+  { "title": "Gold", "amount": 100000 }
 ]

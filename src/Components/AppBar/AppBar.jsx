@@ -6,6 +6,7 @@ import { UserMenu } from 'Components/UserMenu/UserMenu';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { Modal } from 'Components/Common/Modal/Modal';
+import { PageContainer } from 'Components/Common/PageContainer.styled';
 import { deviceSelector } from 'Redux/selectors';
 import UserMenuMobile from 'Components/UserMenuMobile/UserMenuMobile';
 import { SlMenu } from 'react-icons/sl';
@@ -31,30 +32,30 @@ export const AppBar = () => {
   const closedMobileMenu = smartPhoneDevice & !showModal;
   return (
     <AppHeader>
-      {/* <MobileMenuHeaderContainer> */}
-      <AppHeaderContainer>
-        <AppLogo onClick={activatedLinkHandler} />
-        {showModal && (
-          <Modal>
-            <UserMenuMobile
+      <PageContainer>
+        <AppHeaderContainer>
+          <AppLogo onClick={activatedLinkHandler} />
+          {showModal && (
+            <Modal>
+              <UserMenuMobile
+                onClick={changeModalStatusHandler}
+                onLinkClick={activatedLinkHandler}
+              />
+            </Modal>
+          )}
+          {closedMobileMenu ? (
+            <MobileMenuButton
+              isSmartPhone={smartPhoneDevice}
+              isOpenedModal={showModal}
               onClick={changeModalStatusHandler}
-              onLinkClick={activatedLinkHandler}
-            />
-          </Modal>
-        )}
-        {closedMobileMenu ? (
-          <MobileMenuButton
-            isSmartPhone={smartPhoneDevice}
-            isOpenedModal={showModal}
-            onClick={changeModalStatusHandler}
-          >
-            <SlMenu size={18} color="#000" />
-          </MobileMenuButton>
-        ) : (
-          <UserMenu />
-        )}
-      </AppHeaderContainer>
-      {/* </MobileMenuHeaderContainer> */}
+            >
+              <SlMenu size={18} color="#000" />
+            </MobileMenuButton>
+          ) : (
+            <UserMenu />
+          )}
+        </AppHeaderContainer>
+      </PageContainer>
     </AppHeader>
   );
 };
