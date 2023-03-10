@@ -4,9 +4,17 @@ export const BalanceSection = styled.section`
   padding-top: 16px;
 `;
 
+export const FlexContainer = styled.div`
+  @media screen and (min-width: 480px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
 export const BalanceContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 92px;
   padding: 12px;
   background-color: #124720;
@@ -14,6 +22,7 @@ export const BalanceContainer = styled.div`
 
   @media screen and (min-width: 480px) {
     height: 120px;
+    width: 260px;
     padding: 20px;
   }
 `;
@@ -31,11 +40,11 @@ export const BalanceTitle = styled.p`
   color: #fff;
 
   @media screen and (min-width: 480px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 
-export const BalanceText = styled.p`
+export const BalanceContent = styled.p`
   margin: 0;
   margin-top: 16px;
   font-size: 12px;
@@ -63,6 +72,10 @@ export const BalanceAmountContent = styled.p`
   font-weight: bold;
   color: #fff;
   font-size: 12px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 export const BalanceChartContainer = styled.div`

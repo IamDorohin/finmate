@@ -30,7 +30,6 @@ export const UserMenuList = styled.ul`
 `;
 
 export const UserMenuItem = styled.li`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,5 +81,9 @@ export const UserMenuLink = styled(NavLink)`
     /* border-radius: 10px;
     background-color: #000; */
     color: #fac507;
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
   }
 `;

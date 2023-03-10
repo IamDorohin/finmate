@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const UserProfileCardContainer = styled.div`
-  /* position: relative; */
   width: 180px;
   height: 180px;
   margin-left: auto;
@@ -10,6 +9,17 @@ export const UserProfileCardContainer = styled.div`
   padding: 15px;
   border: 3px solid #000;
   border-radius: 20px;
+
+  @media screen and (min-width: 480px) {
+    position: relative;
+    height: 135px;
+    width: 135px;
+    margin: 0;
+    padding: 12px;
+    margin-top: 0;
+    border: 1px solid #000;
+    background-color: #000;
+  }
 `;
 
 export const UserProfileAvatar = styled.div`
@@ -20,12 +30,38 @@ export const UserProfileAvatar = styled.div`
   border: 1px solid #000;
   border-radius: 50%;
   background-color: #0cc9eb;
+
+  @media screen and (min-width: 480px) {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+  }
 `;
 
 export const UserProfileNickname = styled.p`
+  margin: 0;
   margin-top: 30px;
   text-align: center;
   font-weight: bold;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 10px;
+    padding: 0;
+    color: #fff;
+  }
+`;
+
+export const SettingsLogoContainer = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  height: 16px;
+  width: 16px;
+  /* border: 1px solid #fff; */
+  color: #fff;
 `;
 
 export const CardsContainer = styled.div`
@@ -38,3 +74,6 @@ export const CardsContainer = styled.div`
   border: 2px solid #000;
   border-radius: 20px;
 `;
+
+// @media screen and (min-width: 480px) {
+// }
