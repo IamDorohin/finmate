@@ -1,7 +1,4 @@
-import {
-  SettingsButtonContainer,
-  SettingsButtonLogo,
-} from './SettingsButton.styled';
+import { SettingsButtonContainer } from './SettingsButton.styled';
 import { FiSettings } from 'react-icons/fi';
 
 export const SettingsButton = ({ onClick }) => {
