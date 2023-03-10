@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const rotate = keyframes`
+    from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const UserProfileCardContainer = styled.div`
   width: 180px;
@@ -62,6 +71,11 @@ export const SettingsLogoContainer = styled.div`
   width: 16px;
   /* border: 1px solid #fff; */
   color: #fff;
+
+  :hover,
+  :focus {
+    animation: ${rotate} 3s infinite linear;
+  }
 `;
 
 export const CardsContainer = styled.div`
