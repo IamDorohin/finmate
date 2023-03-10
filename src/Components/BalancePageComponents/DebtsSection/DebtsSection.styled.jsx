@@ -5,17 +5,6 @@ export const SectionContainer = styled.section`
 `;
 
 export const SectionList = styled.ul`
-  /* list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 16px;
-  height: 124px;
-  align-content: flex-start; */
   /* justify-content: space-between; */
   margin: 0;
   margin-top: 16px;
@@ -28,17 +17,13 @@ export const SectionList = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
+
+  @media screen and (min-width: 480px) {
+    height: 174px;
+  }
 `;
 
 export const SectionItem = styled.li`
-  /* width: 110px;
-  height: 40px;
-  background-color: #000;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 12px;
-  margin-left: 0; */
-
   display: flex;
   align-items: center;
   width: 110px;
@@ -58,6 +43,11 @@ export const SectionItem = styled.li`
   :nth-child(2n) {
     margin-bottom: 0px;
   }
+
+  @media screen and (min-width: 480px) {
+    width: 165px;
+    height: 60px;
+  }
 `;
 
 export const SectionItemLogo = styled.div`
@@ -69,6 +59,31 @@ export const SectionItemLogo = styled.div`
   padding: 0;
   border: 1px solid #fff;
   border-radius: 50%;
+
+  @media screen and (min-width: 480px) {
+    height: 48px;
+    width: 48px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 60px;
+    width: 60px;
+  }
+`;
+
+export const SectionItemLogoChanger = styled.div`
+  height: 20px;
+  width: 20px;
+
+  @media screen and (min-width: 480px) {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* @media screen and (min-width: 768px) {
+    height: 60px;
+    width: 60px;
+  } */
 `;
 
 export const SectionItemData = styled.div`
@@ -81,10 +96,18 @@ export const SectionItemDataTitle = styled.p`
   margin-bottom: 4px;
   font-size: 10px;
   color: #fff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const SectionItemDataAmount = styled.p`
   margin: 0;
   font-size: 10px;
   color: #fff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
 `;

@@ -30,6 +30,7 @@ export const UserMenuList = styled.ul`
 `;
 
 export const UserMenuItem = styled.li`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,9 +54,7 @@ export const UserMenuItem = styled.li`
 
   :hover,
   :focus {
-    background-color: #000;
     color: #0cc9eb;
-    border: 2px solid #0cc9eb;
   }
 
   @media screen and (min-width: 480px) {
@@ -64,6 +63,7 @@ export const UserMenuItem = styled.li`
     padding: 0;
     margin-left: 0;
     margin-right: 0;
+    border: none;
 
     :not(:first-child) {
       margin-top: 0;

@@ -3,6 +3,7 @@ import {
   SectionList,
   SectionItem,
   SectionItemLogo,
+  SectionItemLogoChanger,
   SectionItemData,
   SectionItemDataTitle,
   SectionItemDataAmount,
@@ -24,7 +25,9 @@ export const InvestmentsSection = () => {
           {investments.map(({ title, amount }) => (
             <SectionItem key={title}>
               <SectionItemLogo>
-                <GiTakeMyMoney color="#fff" />
+                <SectionItemLogoChanger>
+                  <GiTakeMyMoney color="#fff" size={'100%'} />
+                </SectionItemLogoChanger>
               </SectionItemLogo>
               <SectionItemData>
                 <SectionItemDataTitle>{title}</SectionItemDataTitle>

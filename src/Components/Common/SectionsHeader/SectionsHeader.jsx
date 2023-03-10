@@ -3,7 +3,7 @@ import { TiPlus } from 'react-icons/ti';
 import {
   SectionsHeaderContainer,
   SectionsHeaderAddButton,
-  SectionsHeaderData,
+  SectionsHeaderDataContainer,
   SectionsHeaderDataTitle,
   SectionsHeaderDataAmount,
 } from './SectionsHeader.styled';
@@ -14,10 +14,10 @@ export const SectionsHeader = ({ data }) => {
       <SectionsHeaderAddButton>
         <TiPlus size={14} color={'#fff'} />
       </SectionsHeaderAddButton>
-      <SectionsHeaderData>
+      <SectionsHeaderDataContainer>
         <SectionsHeaderDataTitle>{data.title}</SectionsHeaderDataTitle>
-        <SectionsHeaderDataAmount>{data.amount}</SectionsHeaderDataAmount>
-      </SectionsHeaderData>
+        <SectionsHeaderDataAmount>{data.amount} ₴</SectionsHeaderDataAmount>
+      </SectionsHeaderDataContainer>
     </SectionsHeaderContainer>
   );
 };

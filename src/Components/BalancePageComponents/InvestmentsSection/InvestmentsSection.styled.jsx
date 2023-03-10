@@ -15,13 +15,16 @@ export const SectionList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-content: flex-start;
+
+  @media screen and (min-width: 480px) {
+    height: 140px;
+  }
 `;
 
 export const SectionItem = styled.li`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 70px;
+  display: block;
+  width: 80px;
   height: 90px;
   margin-right: 8px;
   padding: 8px 8px;
@@ -32,6 +35,11 @@ export const SectionItem = styled.li`
 
   :nth-last-child {
     margin-right: 0;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 100px;
+    height: 100px;
   }
 `;
 
@@ -44,13 +52,37 @@ export const SectionItemLogo = styled.div`
   padding: 0;
   border: 1px solid #fff;
   border-radius: 50%;
+
+  @media screen and (min-width: 480px) {
+    height: 48px;
+    width: 48px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 60px;
+    width: 60px;
+  }
+`;
+
+export const SectionItemLogoChanger = styled.div`
+  height: 20px;
+  width: 20px;
+
+  @media screen and (min-width: 480px) {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* @media screen and (min-width: 768px) {
+    height: 60px;
+    width: 60px;
+  } */
 `;
 
 export const SectionItemData = styled.div`
   margin: 0;
-  margin-top: 8px;
+  margin-top: 12px;
   padding-left: 2px;
-  width: 54px;
 `;
 
 export const SectionItemDataTitle = styled.p`
@@ -58,12 +90,20 @@ export const SectionItemDataTitle = styled.p`
   margin-bottom: 4px;
   font-size: 10px;
   color: #fff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const SectionItemDataAmount = styled.p`
   margin: 0;
   font-size: 10px;
   color: #fff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
 `;
 // export const SectionContainer = styled.section`
 //   margin-top: 16px;

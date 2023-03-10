@@ -7,26 +7,32 @@ export const BalanceSection = styled.section`
 export const BalanceContainer = styled.div`
   display: flex;
   justify-content: space-between;
-
-  height: 100px;
-  padding: 12px 16px;
-  /* background-color: #10610e; */
+  height: 92px;
+  padding: 12px;
   background-color: #124720;
   border-radius: 10px;
+
+  @media screen and (min-width: 480px) {
+    height: 120px;
+    padding: 20px;
+  }
 `;
 
 export const BalanceSummary = styled.div`
-  /* height: 100px;
-  padding: 12px 16px;
-  /* background-color: #10610e; */
+  /* display: flex; */
+  flex-wrap: wrap;
   background-color: #124720;
   border-radius: 10px;
 `;
 
 export const BalanceTitle = styled.p`
   margin: 0;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 export const BalanceText = styled.p`
@@ -34,6 +40,10 @@ export const BalanceText = styled.p`
   margin-top: 16px;
   font-size: 12px;
   color: #fff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 export const BalanceAmount = styled.div`
@@ -52,6 +62,7 @@ export const BalanceAmountContent = styled.p`
   justify-content: center;
   font-weight: bold;
   color: #fff;
+  font-size: 12px;
 `;
 
 export const BalanceChartContainer = styled.div`
@@ -63,4 +74,9 @@ export const BalanceChartContainer = styled.div`
   border: 1px solid #000;
   border-radius: 10px;
   background-color: #000;
+
+  @media screen and (min-width: 480px) {
+    width: 110px;
+    height: 110px;
+  }
 `;
