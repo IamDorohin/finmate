@@ -29,6 +29,12 @@ export const UserProfileCardContainer = styled.div`
     border: 1px solid #000;
     background-color: #000;
   }
+
+  @media screen and (min-width: 768px) {
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+  }
 `;
 
 export const UserProfileAvatar = styled.div`
@@ -44,6 +50,11 @@ export const UserProfileAvatar = styled.div`
     width: 100px;
     height: 100px;
     background-color: #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 120px;
+    height: 120px;
   }
 `;
 

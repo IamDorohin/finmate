@@ -23,7 +23,7 @@ export const Footer = () => {
             <FooterSocialLinksList>
               <FooterSocialLinksItems>
                 <FooterSocialLinks href="mailto:iamdorohin@gmail.com">
-                  <FiMail />
+                  <FiMail size={'100%'} />
                 </FooterSocialLinks>
               </FooterSocialLinksItems>
               <FooterSocialLinksItems>
@@ -32,7 +32,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <AiOutlineGithub />
+                  <AiOutlineGithub size={'100%'} />
                 </FooterSocialLinks>
               </FooterSocialLinksItems>
               <FooterSocialLinksItems>
@@ -41,7 +41,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <TbBrandLinkedin />
+                  <TbBrandLinkedin size={'100%'} />
                 </FooterSocialLinks>
               </FooterSocialLinksItems>
             </FooterSocialLinksList>

@@ -25,6 +25,12 @@ export const BalanceContainer = styled.div`
     width: 260px;
     padding: 20px;
   }
+
+  @media screen and (min-width: 768px) {
+    height: 160px;
+    width: 400px;
+    padding: 20px;
+  }
 `;
 
 export const BalanceSummary = styled.div`
