@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeAppTheme } from 'Redux/Theme/Slice';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
@@ -11,9 +10,6 @@ import {
 import { MobileMenuButtonsContainer } from './UserMenuMobile.styled';
 import { AppHeaderContainer } from 'Components/AppBar/AppBar.styled';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
-import { UserProfileCard } from 'Components/UserProfileCard/UserProfileCard';
-import { SettingsCard } from 'Components/Common/SettingsCard/SettingsCard';
-// import { SettingsButton } from 'Components/Buttons/SettingsButton/SettingsButton';
 import { LogoutButton } from 'Components/Buttons/LogoutButton/LogoutButton';
 import { themeSelector } from 'Redux/selectors';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -26,9 +22,6 @@ const menuItemsContent = [
 ];
 
 const UserMenuMobile = ({ onClick, onLinkClick }) => {
-  // const [settingsSelect, setsSettingsSelect] = useState(false);
-  // const isSettingsCard = settingsSelect === true;
-
   const currentAppTheme = useSelector(themeSelector);
   const dispatch = useDispatch();
 
@@ -58,9 +51,7 @@ const UserMenuMobile = ({ onClick, onLinkClick }) => {
         ))}
       </UserMenuList>
       <UserContainer />
-      {/* {!isSettingsCard ? <UserProfileCard /> : <SettingsCard />} */}
       <MobileMenuButtonsContainer>
-        {/* <SettingsButton onClick={() => setsSettingsSelect(!settingsSelect)} /> */}
         <ThemeSwitcher onClick={() => themeChangeHandler()} />
         <LogoutButton />
       </MobileMenuButtonsContainer>
