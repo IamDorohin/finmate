@@ -6,6 +6,7 @@ import { UserMenu } from 'Components/UserMenu/UserMenu';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { Modal } from 'Components/Common/Modal/Modal';
+import { Switcher } from 'Components/Buttons/Switcher/Switcher';
 import { PageContainer } from 'Components/Common/PageContainer.styled';
 import { deviceSelector } from 'Redux/selectors';
 import UserMenuMobile from 'Components/UserMenuMobile/UserMenuMobile';
@@ -54,6 +55,7 @@ export const AppBar = () => {
           ) : (
             <UserMenu />
           )}
+          {!smartPhoneDevice && <Switcher />}
         </AppHeaderContainer>
       </PageContainer>
     </AppHeader>

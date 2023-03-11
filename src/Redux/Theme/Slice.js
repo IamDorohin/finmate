@@ -15,7 +15,7 @@ export const themeSlice = createSlice({
 const persistConfig = {
   key: 'theme',
   storage,
-  whitelist: ['value'],
+  // whitelist: ['value'],
 };
 
 export const themeReducer = persistReducer(persistConfig, themeSlice.reducer);

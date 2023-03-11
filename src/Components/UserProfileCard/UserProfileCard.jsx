@@ -8,7 +8,6 @@ import {
 } from './UserProfileCard.styled';
 
 export const UserProfileCard = ({ onClick, currentState }) => {
-  console.log('1', currentState);
   return (
     <UserProfileCardContainer onClick={onClick} animation={currentState}>
       <SettingsLogoContainer>

@@ -10,18 +10,23 @@ const rotate = keyframes`
 `;
 
 export const UserProfileCardContainer = styled.div`
+  position: relative;
+
   width: 180px;
   height: 180px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   padding: 15px;
-  border: 3px solid #000;
+  /* border: 3px solid #000; */
+  border: 1px solid #000;
+  background-color: #000;
+
   border-radius: 20px;
   cursor: pointer;
 
   @media screen and (min-width: 480px) {
-    position: relative;
+    /* position: relative; */
     height: 135px;
     width: 135px;
     margin: 0;
@@ -59,7 +64,8 @@ export const UserProfileAvatar = styled.div`
   margin-right: auto;
   border: 1px solid #000;
   border-radius: 50%;
-  background-color: #0cc9eb;
+  /* background-color: #0cc9eb; */
+  background-color: #fff;
 
   @media screen and (min-width: 480px) {
     width: 100px;
@@ -84,12 +90,12 @@ export const UserProfileNickname = styled.p`
   text-align: center;
   font-weight: bold;
   font-size: 12px;
+  color: #fff;
 
   @media screen and (min-width: 480px) {
     margin-top: 10px;
     padding: 0;
     font-size: 16px;
-    color: #fff;
   }
 
   @media screen and (min-width: 768px) {
@@ -116,10 +122,10 @@ export const SettingsLogoContainer = styled.div`
   color: #fff;
   cursor: pointer;
 
-  :hover,
+  /* :hover,
   :focus {
     animation: ${rotate} 3s infinite linear;
-  }
+  } */
 
   @media screen and (min-width: 480px) {
     top: 8px;

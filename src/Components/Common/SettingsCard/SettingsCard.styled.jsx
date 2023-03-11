@@ -10,6 +10,8 @@ const rotate = keyframes`
 `;
 
 export const SettingsCardContainer = styled.div`
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +22,10 @@ export const SettingsCardContainer = styled.div`
   margin-right: auto;
   margin-top: 20px;
   padding: 15px;
-  border: 3px solid #0cc9eb;
+
+  /* border: 3px solid #0cc9eb; */
+  border: 1px solid #000;
+
   border-radius: 20px;
   font-weight: bold;
   background-color: #000;
@@ -28,14 +33,13 @@ export const SettingsCardContainer = styled.div`
   cursor: pointer;
 
   @media screen and (min-width: 480px) {
-    position: relative;
+    /* position: relative; */
     height: 135px;
     width: 135px;
     margin: 0;
     padding: 12px;
     margin-top: 0;
     border: 1px solid #000;
-    background-color: #000;
   }
 
   @media screen and (min-width: 768px) {

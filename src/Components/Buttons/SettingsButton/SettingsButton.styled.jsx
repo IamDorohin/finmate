@@ -20,13 +20,13 @@ export const SettingsButtonContainer = styled.button`
   padding: 0;
   margin: 0;
 
-  &:hover,
+  /* &:hover,
   &:focus {
     animation: ${props =>
-      props &&
-      css`
-        ${rotate} 3s infinite linear
-      `};
+    props &&
+    css`
+      ${rotate} 3s infinite linear
+    `};
     color: #0cc9eb;
-  }
+  } */
 `;
