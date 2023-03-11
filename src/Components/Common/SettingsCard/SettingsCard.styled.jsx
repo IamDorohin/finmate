@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const rotate = keyframes`
+    from {
+    transform: rotateY(-90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+`;
 
 export const SettingsCardContainer = styled.div`
   display: flex;
@@ -16,6 +25,7 @@ export const SettingsCardContainer = styled.div`
   font-weight: bold;
   background-color: #000;
   color: #fff;
+  cursor: pointer;
 
   @media screen and (min-width: 480px) {
     position: relative;
@@ -27,6 +37,26 @@ export const SettingsCardContainer = styled.div`
     border: 1px solid #000;
     background-color: #000;
   }
+
+  @media screen and (min-width: 768px) {
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 200px;
+    width: 200px;
+    padding: 40px;
+  }
+
+  animation: ${props => {
+    if (props.onClick) {
+      return css`
+        ${rotate} 0.7s 1 linear
+      `;
+    }
+  }};
 `;
 
 export const UserProfileLogoContainer = styled.div`
@@ -38,8 +68,44 @@ export const UserProfileLogoContainer = styled.div`
   right: 8px;
   height: 16px;
   width: 16px;
-  /* border: 1px solid #fff; */
   color: #fff;
+  cursor: pointer;
+
+  @media screen and (min-width: 480px) {
+    top: 8px;
+    right: 8px;
+    height: 20px;
+    width: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 8px;
+    right: 8px;
+    height: 24px;
+    width: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 12px;
+    right: 12px;
+    height: 32px;
+    width: 32px;
+  }
 `;
 
-export const SettingsCardContent = styled.div``;
+export const SettingsCardContent = styled.div`
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
+
+  opacity: ${props => {
+    switch (props.animation) {
+      case 'false':
+        return '1';
+      case 'true':
+        return '0';
+      default:
+        return;
+    }
+  }};
+`;

@@ -9,6 +9,7 @@ import {
   FooterSocialLinksList,
   FooterSocialLinksItems,
   FooterSocialLinks,
+  FooterSocialLinksWrapper,
 } from './Footer.styled';
 import { PageContainer } from 'Components/Common/PageContainer.styled';
 export const Footer = () => {
@@ -23,7 +24,9 @@ export const Footer = () => {
             <FooterSocialLinksList>
               <FooterSocialLinksItems>
                 <FooterSocialLinks href="mailto:iamdorohin@gmail.com">
-                  <FiMail size={'100%'} />
+                  <FooterSocialLinksWrapper>
+                    <FiMail size={'100%'} />
+                  </FooterSocialLinksWrapper>
                 </FooterSocialLinks>
               </FooterSocialLinksItems>
               <FooterSocialLinksItems>
@@ -32,7 +35,9 @@ export const Footer = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <AiOutlineGithub size={'100%'} />
+                  <FooterSocialLinksWrapper>
+                    <AiOutlineGithub size={'100%'} />
+                  </FooterSocialLinksWrapper>
                 </FooterSocialLinks>
               </FooterSocialLinksItems>
               <FooterSocialLinksItems>
@@ -41,7 +46,9 @@ export const Footer = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <TbBrandLinkedin size={'100%'} />
+                  <FooterSocialLinksWrapper>
+                    <TbBrandLinkedin size={'100%'} />
+                  </FooterSocialLinksWrapper>
                 </FooterSocialLinks>
               </FooterSocialLinksItems>
             </FooterSocialLinksList>

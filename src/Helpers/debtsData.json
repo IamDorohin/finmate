@@ -1,5 +1,7 @@
 [
   { "title": "Credit mono", "amount": 110000 },
   { "title": "Parents", "amount": 110000 },
-  { "title": "Family loan", "amount": 110000 }
+  { "title": "Family loan", "amount": 110000 },
+  { "title": "Credit Pryvat", "amount": 110000 },
+  { "title": "Credit Ukrsib", "amount": 110000 }
 ]

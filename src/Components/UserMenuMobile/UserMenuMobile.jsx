@@ -1,6 +1,6 @@
-import { changeAppTheme } from 'Redux/Theme/Slice';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { changeAppTheme } from 'Redux/Theme/Slice';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { ThemeSwitcher } from 'Components/Buttons/ThemeSwitcher/ThemeSwitcher';
 import {

@@ -36,7 +36,7 @@ export const AppBar = () => {
         <AppHeaderContainer>
           <AppLogo onClick={activatedLinkHandler} />
           {showModal && (
-            <Modal>
+            <Modal onClose={changeModalStatusHandler}>
               <UserMenuMobile
                 onClick={changeModalStatusHandler}
                 onLinkClick={activatedLinkHandler}

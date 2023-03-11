@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { TiPlus } from 'react-icons/ti';
-
+import { Modal } from 'Components/Common/Modal/Modal';
 import {
   SectionsHeaderContainer,
   SectionsHeaderAddButton,
@@ -9,9 +10,16 @@ import {
 } from './SectionsHeader.styled';
 
 export const SectionsHeader = ({ data }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const changeModalStatusHandler = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <SectionsHeaderContainer>
-      <SectionsHeaderAddButton>
+      {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
+      <SectionsHeaderAddButton onClick={changeModalStatusHandler}>
         <TiPlus size={14} color={'#fff'} />
       </SectionsHeaderAddButton>
       <SectionsHeaderDataContainer>

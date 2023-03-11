@@ -1,9 +1,10 @@
 import {
   SectionContainer,
+  SectionListWrapper,
   SectionList,
   SectionItem,
   SectionItemLogo,
-  SectionItemLogoChanger,
+  // SectionItemLogoChanger,
   SectionItemData,
   SectionItemDataTitle,
   SectionItemDataAmount,
@@ -21,21 +22,23 @@ export const PaymentAccountsSection = () => {
     <SectionContainer>
       <PageContainer>
         <SectionsHeader data={sectionHeaderData} />
-        <SectionList>
-          {payment.map(({ title, amount }) => (
-            <SectionItem key={title}>
-              <SectionItemLogo>
-                <SectionItemLogoChanger>
+        <SectionListWrapper>
+          <SectionList>
+            {payment.map(({ title, amount }) => (
+              <SectionItem key={title}>
+                <SectionItemLogo>
+                  {/* <SectionItemLogoChanger> */}
                   <GiTakeMyMoney color="#fff" size={'100%'} />
-                </SectionItemLogoChanger>
-              </SectionItemLogo>
-              <SectionItemData>
-                <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-              </SectionItemData>
-            </SectionItem>
-          ))}
-        </SectionList>
+                  {/* </SectionItemLogoChanger> */}
+                </SectionItemLogo>
+                <SectionItemData>
+                  <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                  <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+                </SectionItemData>
+              </SectionItem>
+            ))}
+          </SectionList>
+        </SectionListWrapper>
       </PageContainer>
     </SectionContainer>
   );

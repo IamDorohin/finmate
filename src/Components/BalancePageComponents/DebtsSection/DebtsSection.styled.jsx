@@ -4,8 +4,14 @@ export const SectionContainer = styled.section`
   margin-top: 16px;
 `;
 
+export const SectionListWrapper = styled.div`
+  margin-top: 8px;
+  padding: 2px 8px;
+  border: 1px solid #000;
+  border-radius: 20px;
+`;
+
 export const SectionList = styled.ul`
-  /* justify-content: space-between; */
   margin: 0;
   margin-top: 16px;
   padding-left: 0;
@@ -19,7 +25,15 @@ export const SectionList = styled.ul`
   align-content: flex-start;
 
   @media screen and (min-width: 480px) {
-    height: 174px;
+    height: 164px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 184px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 210px;
   }
 `;
 
@@ -35,6 +49,7 @@ export const SectionItem = styled.li`
   border-radius: 10px;
   list-style: none;
   background-color: #000;
+  cursor: pointer;
 
   :nth-last-child(-n + 2) {
     margin-right: 0;
@@ -45,8 +60,18 @@ export const SectionItem = styled.li`
   }
 
   @media screen and (min-width: 480px) {
-    width: 165px;
+    width: 150px;
     height: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 185px;
+    height: 70px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 210px;
+    height: 80px;
   }
 `;
 
@@ -54,41 +79,31 @@ export const SectionItemLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
-  padding: 0;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
   border: 1px solid #fff;
   border-radius: 50%;
 
   @media screen and (min-width: 480px) {
-    height: 48px;
-    width: 48px;
+    height: 32px;
+    width: 32px;
+    padding: 8px;
   }
 
   @media screen and (min-width: 768px) {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
   }
-`;
-
-export const SectionItemLogoChanger = styled.div`
-  height: 20px;
-  width: 20px;
-
-  @media screen and (min-width: 480px) {
-    height: 30px;
-    width: 30px;
-  }
-
-  /* @media screen and (min-width: 768px) {
-    height: 60px;
-    width: 60px;
-  } */
 `;
 
 export const SectionItemData = styled.div`
   margin: 0;
   margin-left: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 `;
 
 export const SectionItemDataTitle = styled.p`
@@ -100,6 +115,14 @@ export const SectionItemDataTitle = styled.p`
   @media screen and (min-width: 480px) {
     font-size: 12px;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 `;
 
 export const SectionItemDataAmount = styled.p`
@@ -109,5 +132,13 @@ export const SectionItemDataAmount = styled.p`
 
   @media screen and (min-width: 480px) {
     font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
   }
 `;

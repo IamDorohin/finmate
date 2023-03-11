@@ -72,18 +72,23 @@ export const UserMenuItem = styled.li`
 `;
 
 export const UserMenuLink = styled(NavLink)`
-  /* width: 100%;
-  height: 100%; */
   text-decoration: none;
   color: inherit;
+  font-size: 12px;
 
   &.active {
-    /* border-radius: 10px;
-    background-color: #000; */
     color: #fac507;
   }
 
   @media screen and (min-width: 480px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
   }
 `;

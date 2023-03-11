@@ -2,13 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const AppLogoContainer = styled.div`
-  /* padding: 5px 10px; */
   padding-left: 0;
-  /* padding-left: 10px;
-  padding-right: 10px; */
-  /* border-radius: 5px; */
-  /* border-radius: 50%; */
-  /* outline: 1px solid black; */
 `;
 
 export const AppLogoLink = styled(Link)`
@@ -28,7 +22,7 @@ export const AppLogoIconContainer = styled.div`
 
   &:hover,
   :focus {
-    color: #0cc9eb;
+    /* color: #0cc9eb; */
   }
 `;
 
@@ -37,6 +31,14 @@ export const AppLogoPrimaryEl = styled.div`
   font-weight: bold;
   font-size: 20px;
   color: black;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 `;
 
 export const AppLogoSecondaryEl = styled.div`
@@ -44,4 +46,12 @@ export const AppLogoSecondaryEl = styled.div`
   font-weight: bold;
   font-size: 20px;
   color: black;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 `;

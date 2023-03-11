@@ -10,9 +10,15 @@ export const UserContainer = () => {
   return (
     <UserContainerEl>
       {isSettingsCard ? (
-        <UserProfileCard onClick={() => setsSettingsSelect(!settingsSelect)} />
+        <UserProfileCard
+          onClick={() => setsSettingsSelect(!settingsSelect)}
+          currentState={isSettingsCard}
+        />
       ) : (
-        <SettingsCard onClick={() => setsSettingsSelect(!settingsSelect)} />
+        <SettingsCard
+          onClick={() => setsSettingsSelect(!settingsSelect)}
+          currentState={isSettingsCard}
+        />
       )}
     </UserContainerEl>
   );

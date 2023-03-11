@@ -4,5 +4,9 @@
   { "title": "Ukrsib", "amount": 100000 },
   { "title": "Pryvat bank", "amount": 100000 },
   { "title": "Ощадбанк", "amount": 100000 },
-  { "title": "Збереження", "amount": 100000 }
+  { "title": "Збереження", "amount": 100000 },
+  { "title": "A-Bank", "amount": 100000 },
+  { "title": "Sense", "amount": 100000 },
+  { "title": "Deposite", "amount": 100000 },
+  { "title": "moneybox", "amount": 100000 }
 ]

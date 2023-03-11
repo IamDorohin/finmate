@@ -8,8 +8,17 @@ export const SectionsHeaderContainer = styled.div`
   padding-left: 8px;
   padding-right: 8px;
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: #a2a6a3;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 660px;
+    height: 40px;
+  }
 `;
 
 export const SectionsHeaderAddButton = styled.button`
@@ -19,6 +28,12 @@ export const SectionsHeaderAddButton = styled.button`
   border: transparent;
   border-radius: 4px;
   background-color: #124720;
+  cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export const SectionsHeaderDataContainer = styled.div`
@@ -37,6 +52,10 @@ export const SectionsHeaderDataTitle = styled.p`
   @media screen and (min-width: 480px) {
     font-size: 14px;
   }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
 `;
 
 export const SectionsHeaderDataAmount = styled.p`
@@ -46,5 +65,9 @@ export const SectionsHeaderDataAmount = styled.p`
 
   @media screen and (min-width: 480px) {
     font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
   }
 `;

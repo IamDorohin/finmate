@@ -1,9 +1,10 @@
 import {
   SectionContainer,
+  SectionListWrapper,
   SectionList,
   SectionItem,
+  SectionItemContent,
   SectionItemLogo,
-  SectionItemLogoChanger,
   SectionItemData,
   SectionItemDataTitle,
   SectionItemDataAmount,
@@ -21,21 +22,23 @@ export const InvestmentsSection = () => {
     <SectionContainer>
       <PageContainer>
         <SectionsHeader data={sectionHeaderData} />
-        <SectionList>
-          {investments.map(({ title, amount }) => (
-            <SectionItem key={title}>
-              <SectionItemLogo>
-                <SectionItemLogoChanger>
-                  <GiTakeMyMoney color="#fff" size={'100%'} />
-                </SectionItemLogoChanger>
-              </SectionItemLogo>
-              <SectionItemData>
-                <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-              </SectionItemData>
-            </SectionItem>
-          ))}
-        </SectionList>
+        <SectionListWrapper>
+          <SectionList>
+            {investments.map(({ title, amount }) => (
+              <SectionItem key={title}>
+                <SectionItemContent>
+                  <SectionItemLogo>
+                    <GiTakeMyMoney color="#fff" size={'100%'} />
+                  </SectionItemLogo>
+                  <SectionItemData>
+                    <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                    <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+                  </SectionItemData>
+                </SectionItemContent>
+              </SectionItem>
+            ))}
+          </SectionList>
+        </SectionListWrapper>
       </PageContainer>
     </SectionContainer>
   );

@@ -7,10 +7,11 @@ import {
   SettingsLogoContainer,
 } from './UserProfileCard.styled';
 
-export const UserProfileCard = ({ onClick }) => {
+export const UserProfileCard = ({ onClick, currentState }) => {
+  console.log('1', currentState);
   return (
-    <UserProfileCardContainer>
-      <SettingsLogoContainer onClick={onClick}>
+    <UserProfileCardContainer onClick={onClick} animation={currentState}>
+      <SettingsLogoContainer>
         <RiSettings4Fill size="100%" />
       </SettingsLogoContainer>
       <UserProfileAvatar>

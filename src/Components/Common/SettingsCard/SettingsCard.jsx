@@ -5,10 +5,10 @@ import {
   SettingsCardContent,
 } from './SettingsCard.styled';
 
-export const SettingsCard = ({ onClick }) => {
+export const SettingsCard = ({ onClick, currentState }) => {
   return (
-    <SettingsCardContainer>
-      <UserProfileLogoContainer onClick={onClick}>
+    <SettingsCardContainer onClick={onClick} animation={currentState}>
+      <UserProfileLogoContainer>
         <HiUserCircle size="100%" />
       </UserProfileLogoContainer>
       <SettingsCardContent>Your settings will be here soon</SettingsCardContent>
