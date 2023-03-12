@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { changeDeviceType } from 'Redux/Device/slice';
 import { BalancePage } from 'Pages/BalancePage/BalancePage';
+import { BudgetPage } from 'Pages/BudgetPage/BudgetPage';
 import './App.css';
 
 export const App = () => {
@@ -27,6 +28,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/balance" element={<BalancePage />}></Route>
+        <Route path="/budget" element={<BudgetPage />}></Route>
       </Route>
     </Routes>
   );

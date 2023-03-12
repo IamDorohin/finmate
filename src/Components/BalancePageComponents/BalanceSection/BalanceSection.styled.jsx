@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BalanceSection = styled.section`
-  padding-top: 16px;
+  margin-top: 16px;
 `;
 
 export const FlexContainer = styled.div`
