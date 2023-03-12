@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { UserProfileCard } from 'Components/UserProfileCard/UserProfileCard';
-import { SettingsCard } from 'Components/Common/SettingsCard/SettingsCard';
+import { UserProfileCard } from 'Components/UserContainer/UserProfileCard/UserProfileCard';
+import { SettingsCard } from 'Components/UserContainer/SettingsCard/SettingsCard';
 import { UserContainerEl } from './UserContainer.styled';
 
 export const UserContainer = () => {

@@ -49,9 +49,11 @@ export const SettingsCardContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    /* height: 200px;
     width: 200px;
-    padding: 40px;
+    padding: 40px; */
   }
 
   animation: ${props => {
@@ -90,10 +92,10 @@ export const UserProfileLogoContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    top: 12px;
+    /* top: 12px;
     right: 12px;
     height: 32px;
-    width: 32px;
+    width: 32px; */
   }
 `;
 

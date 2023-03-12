@@ -18,7 +18,7 @@ export const BalanceContainer = styled.div`
   height: 92px;
   padding: 12px;
   background-color: #124720;
-  border-radius: 20px;
+  border-radius: 10px;
 
   @media screen and (min-width: 480px) {
     height: 120px;
@@ -33,9 +33,11 @@ export const BalanceContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 200px;
+    /* height: 200px;
     width: 600px;
-    padding: 40px;
+    padding: 40px; */
+    width: 680px;
+    height: 180px;
   }
 `;
 
@@ -56,7 +58,7 @@ export const BalanceTitle = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
@@ -71,7 +73,7 @@ export const BalanceContent = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 26px;
   }
 `;
@@ -84,8 +86,10 @@ export const BalanceAmount = styled.div`
   height: 28px;
 
   @media screen and (min-width: 1200px) {
-    width: 220px;
-    height: 48px;
+    width: 200px;
+    height: 32px;
+    /* width: 220px;
+    height: 48px; */
   }
 `;
 
@@ -104,7 +108,7 @@ export const BalanceAmountContent = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 26px;
   }
 `;

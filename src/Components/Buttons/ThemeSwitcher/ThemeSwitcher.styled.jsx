@@ -4,46 +4,30 @@ export const ThemeSwitcherContainer = styled.div`
   position: relative;
   display: flex;
   border: 1px solid black;
-  border-radius: 8px;
-  width: 82px;
-  height: 40px;
+  border-radius: 24px;
+  width: 20px;
+  height: 42px;
   background-color: #000;
+
+  @media screen and (min-width: 480px) {
+    margin-left: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 24px;
+  }
 `;
 
 export const ThemeSwitcherStars = styled.div`
   position: absolute;
-  top: 10px;
-  left: 50px;
+  left: 3px;
   color: #fff;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
+  transform: translateX(2px);
 
-  transition-property: left;
-  transition-duration: 0.5s;
-
-  left: ${props => {
-    switch (props.theme) {
-      case 'light':
-        return '8px';
-      default:
-        return '50px';
-    }
-  }};
-`;
-
-export const ThemeSwitcherButton = styled.button`
-  position: absolute;
-  top: 1px;
-  left: 41.5px;
-  padding: 0;
-  width: 40px;
-  height: 38px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  background-color: #646666;
-
-  transition-property: left;
-  transition-duration: 0.25s;
+  transition-property: transform;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   transition-timing-function: ${props => {
@@ -55,12 +39,63 @@ export const ThemeSwitcherButton = styled.button`
     }
   }};
 
-  left: ${props => {
+  transform: ${props => {
     switch (props.theme) {
       case 'dark':
-        return '0.5px';
+        return 'translateY(2px)';
       default:
-        return '41.5px';
+        return 'translateY(23px)';
     }
   }};
+`;
+
+export const ThemeSwitcherButton = styled.button`
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #646666;
+  transform: translateY(0px);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition-timing-function: ${props => {
+    switch (props.theme) {
+      case 'dark':
+        return 'cubic-bezier(0.4, 0, 0.2, 1);';
+      default:
+        return 'cubic-bezier(.8,0,.6,1)';
+    }
+  }};
+
+  transform: ${props => {
+    switch (props.theme) {
+      case 'dark':
+        return 'translateY(22px)';
+      default:
+        return 'translateY(0px)';
+    }
+  }};
+`;
+
+export const ThemeSwitcherSunButton = styled.div`
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 7px;
+  width: 7px;
+`;
+
+export const ThemeSwitcherMoonButton = styled.div`
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  height: 8px;
+  width: 8px;
 `;

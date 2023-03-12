@@ -1,15 +1,29 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const UserMenuContainer = styled.div`
+export const UserNavContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-right: 1px solid black;
+  margin-left: 68px;
+  padding: 6px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 342px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    /* margin-left: 550px; */
+    margin-left: 449px;
+    padding-right: 24px;
+  }
 `;
 
-export const UserMenuNav = styled.nav``;
+export const UserNavMenu = styled.nav``;
 
-export const UserMenuList = styled.ul`
+export const UserNavList = styled.ul`
   display: block;
   flex-wrap: wrap;
   align-items: center;
@@ -29,7 +43,7 @@ export const UserMenuList = styled.ul`
   }
 `;
 
-export const UserMenuItem = styled.li`
+export const UserNavItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +56,9 @@ export const UserMenuItem = styled.li`
   padding-bottom: 15px;
   border-radius: 10px;
   color: #000;
+  /* border-top: 1px solid #000; */
   border: 1px solid #000;
+
   :first-child {
     /* border-top: 1px solid #000; */
   }
@@ -69,12 +85,19 @@ export const UserMenuItem = styled.li`
       margin-left: 10px;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    :not(:first-child) {
+      margin-top: 0;
+      margin-left: 48px;
+    }
+  }
 `;
 
-export const UserMenuLink = styled(NavLink)`
+export const UserNavLink = styled(NavLink)`
   text-decoration: none;
   color: inherit;
-  font-size: 12px;
+  font-size: 14px;
 
   &.active {
     color: #fac507;

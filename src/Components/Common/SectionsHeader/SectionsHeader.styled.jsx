@@ -16,8 +16,8 @@ export const SectionsHeaderContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    width: 660px;
-    height: 40px;
+    width: 700px;
+    height: 30px;
   }
 `;
 
@@ -31,8 +31,8 @@ export const SectionsHeaderAddButton = styled.button`
   cursor: pointer;
 
   @media screen and (min-width: 1200px) {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
   }
 `;
 
@@ -54,7 +54,7 @@ export const SectionsHeaderDataTitle = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 
@@ -68,6 +68,6 @@ export const SectionsHeaderDataAmount = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;

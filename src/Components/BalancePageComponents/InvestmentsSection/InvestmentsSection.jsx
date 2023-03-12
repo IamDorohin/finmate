@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Modal } from 'Components/Common/Modal/Modal';
 import {
   SectionContainer,
   SectionListWrapper,
@@ -17,15 +19,21 @@ import { GiTakeMyMoney } from 'react-icons/gi';
 
 export const InvestmentsSection = () => {
   const sectionHeaderData = data[1];
+  const [showModal, setShowModal] = useState(false);
+
+  const changeModalStatusHandler = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <SectionContainer>
       <PageContainer>
+        {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
         <SectionsHeader data={sectionHeaderData} />
         <SectionListWrapper>
           <SectionList>
             {investments.map(({ title, amount }) => (
-              <SectionItem key={title}>
+              <SectionItem key={title} onClick={changeModalStatusHandler}>
                 <SectionItemContent>
                   <SectionItemLogo>
                     <GiTakeMyMoney color="#fff" size={'100%'} />

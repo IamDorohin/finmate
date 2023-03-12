@@ -22,7 +22,7 @@ export const UserProfileCardContainer = styled.div`
   border: 1px solid #000;
   background-color: #000;
 
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
 
   @media screen and (min-width: 480px) {
@@ -43,9 +43,11 @@ export const UserProfileCardContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 200px;
+    height: 180px;
+    width: 180px;
+    /* height: 200px;
     width: 200px;
-    padding: 40px;
+    padding: 40px; */
   }
 
   animation: ${props => {
@@ -79,8 +81,8 @@ export const UserProfileAvatar = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 150px;
-    width: 150px;
+    /* height: 150px;
+    width: 150px; */
   }
 `;
 
@@ -89,7 +91,7 @@ export const UserProfileNickname = styled.p`
   margin-top: 30px;
   text-align: center;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
 
   @media screen and (min-width: 480px) {
@@ -104,8 +106,8 @@ export const UserProfileNickname = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: 24px;
-    font-size: 24px;
+    /* margin-top: 24px;
+    font-size: 24px; */
   }
 `;
 
@@ -140,10 +142,10 @@ export const SettingsLogoContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    top: 12px;
+    /* top: 12px;
     right: 12px;
     height: 32px;
-    width: 32px;
+    width: 32px; */
   }
 `;
 

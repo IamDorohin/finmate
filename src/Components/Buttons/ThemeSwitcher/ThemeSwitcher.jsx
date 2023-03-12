@@ -6,6 +6,8 @@ import {
   ThemeSwitcherContainer,
   ThemeSwitcherStars,
   ThemeSwitcherButton,
+  ThemeSwitcherSunButton,
+  ThemeSwitcherMoonButton,
 } from './ThemeSwitcher.styled';
 import { themeSelector } from 'Redux/selectors';
 
@@ -17,13 +19,17 @@ export const ThemeSwitcher = ({ onClick }) => {
   return (
     <ThemeSwitcherContainer onClick={onClick}>
       <ThemeSwitcherStars theme={currentAppTheme}>
-        <WiStars size={20} />
+        <WiStars size={'100%'} />
       </ThemeSwitcherStars>
       <ThemeSwitcherButton type="button" theme={currentAppTheme}>
         {isLightTheme ? (
-          <FiMoon size={16} color="#0cc9eb" />
+          <ThemeSwitcherMoonButton>
+            <FiMoon size={12} color="#0cc9eb" />
+          </ThemeSwitcherMoonButton>
         ) : (
-          <FiSun size={16} color="#fac507" />
+          <ThemeSwitcherSunButton>
+            <FiSun size={12} color="#fac507" />
+          </ThemeSwitcherSunButton>
         )}
       </ThemeSwitcherButton>
     </ThemeSwitcherContainer>

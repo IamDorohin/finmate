@@ -1,14 +1,15 @@
-import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeAppTheme } from 'Redux/Theme/Slice';
+import { themeSelector } from 'Redux/selectors';
+import { deviceSelector } from 'Redux/selectors';
+
 import { AppHeader, AppHeaderContainer } from './AppBar.styled';
-import { UserMenu } from 'Components/UserMenu/UserMenu';
-// import { MobileMenuHeaderContainer } from 'Components/UserMenuMobile/UserMenuMobile.styled';
+import { UserNav } from 'Components/SiteNavigation/UserNav/UserNav';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
-import { Modal } from 'Components/Common/Modal/Modal';
-import { Switcher } from 'Components/Buttons/Switcher/Switcher';
+import { ThemeSwitcher } from 'Components/Buttons/ThemeSwitcher/ThemeSwitcher';
 import { PageContainer } from 'Components/Common/PageContainer.styled';
-import { deviceSelector } from 'Redux/selectors';
 import UserMenuMobile from 'Components/UserMenuMobile/UserMenuMobile';
 import { SlMenu } from 'react-icons/sl';
 
@@ -30,6 +31,17 @@ export const AppBar = () => {
     setShowModal(false);
   };
 
+  const currentAppTheme = useSelector(themeSelector);
+  const dispatch = useDispatch();
+
+  const themeChangeHandler = () => {
+    if (currentAppTheme === 'light') {
+      dispatch(changeAppTheme({ value: 'dark' }));
+    } else {
+      dispatch(changeAppTheme({ value: 'light' }));
+    }
+  };
+
   const closedMobileMenu = smartPhoneDevice & !showModal;
   return (
     <AppHeader>
@@ -37,12 +49,10 @@ export const AppBar = () => {
         <AppHeaderContainer>
           <AppLogo onClick={activatedLinkHandler} />
           {showModal && (
-            <Modal onClose={changeModalStatusHandler}>
-              <UserMenuMobile
-                onClick={changeModalStatusHandler}
-                onLinkClick={activatedLinkHandler}
-              />
-            </Modal>
+            <UserMenuMobile
+              onClick={changeModalStatusHandler}
+              onLinkClick={activatedLinkHandler}
+            />
           )}
           {closedMobileMenu ? (
             <MobileMenuButton
@@ -53,9 +63,11 @@ export const AppBar = () => {
               <SlMenu size={18} color="#000" />
             </MobileMenuButton>
           ) : (
-            <UserMenu />
+            <UserNav />
           )}
-          {!smartPhoneDevice && <Switcher />}
+          {!smartPhoneDevice && (
+            <ThemeSwitcher onClick={() => themeChangeHandler()} />
+          )}
         </AppHeaderContainer>
       </PageContainer>
     </AppHeader>

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { deviceSelector } from 'Redux/selectors';
 import { RxBarChart } from 'react-icons/rx';
 import { PageContainer } from 'Components/Common/PageContainer.styled';
-import { UserContainer } from '../UserContainer/UserContainer';
+import { UserContainer } from '../../UserContainer/UserContainer';
 import {
   BalanceSection,
   BalanceContainer,

@@ -7,7 +7,7 @@ export const SectionContainer = styled.section`
 export const SectionListWrapper = styled.div`
   margin-top: 8px;
   padding: 2px 8px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 20px;
 `;
 
@@ -24,6 +24,17 @@ export const SectionList = styled.ul`
   flex-wrap: wrap;
   align-content: flex-start;
 
+  ::-webkit-scrollbar {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+  }
+
   @media screen and (min-width: 480px) {
     height: 140px;
   }
@@ -33,7 +44,7 @@ export const SectionList = styled.ul`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 210px;
+    height: 175px;
   }
 `;
 
@@ -66,8 +77,8 @@ export const SectionItem = styled.li`
   }
 
   @media screen and (min-width: 1200px) {
-    width: 140px;
-    height: 160px;
+    /* width: 140px;
+    height: 160px; */
   }
 `;
 
@@ -99,9 +110,9 @@ export const SectionItemLogo = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    width: 70px;
+    /* width: 70px;
     height: 70px;
-    margin-bottom: 18px;
+    margin-bottom: 18px; */
   }
 `;
 
@@ -131,7 +142,7 @@ export const SectionItemDataTitle = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -150,6 +161,6 @@ export const SectionItemDataAmount = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;

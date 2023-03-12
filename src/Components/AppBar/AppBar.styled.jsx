@@ -10,5 +10,8 @@ export const AppHeaderContainer = styled.div`
   padding: 16px 0;
   margin-left: 0;
   margin-right: 0;
-  /* border-bottom: 1px solid #000; */
+
+  @media screen and (min-width: 480px) {
+    justify-content: end;
+  }
 `;
