@@ -11,14 +11,12 @@ const rotate = keyframes`
 
 export const UserProfileCardContainer = styled.div`
   position: relative;
-
   width: 180px;
   height: 180px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   padding: 15px;
-  /* border: 3px solid #000; */
   border: 1px solid #000;
   background-color: #000;
 
@@ -113,11 +111,11 @@ export const UserProfileNickname = styled.p`
 
 export const SettingsLogoContainer = styled.div`
   position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 8px;
-  right: 8px;
   height: 16px;
   width: 16px;
   /* border: 1px solid #fff; */

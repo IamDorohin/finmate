@@ -18,6 +18,15 @@ export const AppBar = () => {
   const smartPhoneDevice = useSelector(deviceSelector);
 
   useEffect(() => {
+    const appHeaderHeight = document
+      .querySelector('header')
+      .getBoundingClientRect().height;
+
+    document.body.style.paddingTop = `${appHeaderHeight}px`;
+    console.log(appHeaderHeight);
+  });
+
+  useEffect(() => {
     if (!smartPhoneDevice) {
       setShowModal(false);
     }

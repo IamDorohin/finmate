@@ -34,35 +34,27 @@ export const ExpensesSectionWrapper = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    /* height: 200px;
-    width: 600px;
-    padding: 40px; */
     width: 680px;
     height: 180px;
   }
 `;
 
 export const SectionListWrapper = styled.div`
-  margin-top: 8px;
-  padding: 2px 8px;
-  /* border: 1px solid #000; */
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const SectionList = styled.ul`
-  margin: 0;
-  margin-top: 16px;
-  padding-left: 0;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  height: 330px;
-
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-content: flex-start;
+  width: 320px;
+  margin: 0;
+  margin-left: -4px;
+  margin-top: -12px;
+  padding: 0;
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     background-color: #fff;
     border-radius: 10px;
     height: 8px;
@@ -71,69 +63,65 @@ export const SectionList = styled.ul`
   ::-webkit-scrollbar-thumb {
     background: #000;
     border-radius: 10px;
-  }
+  } */
 
   @media screen and (min-width: 480px) {
-    height: 140px;
+    width: 480px;
   }
 
-  @media screen and (min-width: 769px) {
-    height: 170px;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    margin-left: -8px;
+    margin-top: -16px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 175px;
+    width: 1200px;
+    margin-left: -14px;
+    margin-top: -24px;
   }
 `;
 
 export const SectionItem = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 68px;
-  height: 80px;
-  margin-right: 4px;
-  margin-bottom: 12px;
-  padding: 4px;
-  border: 1px solid black;
-  border-radius: 10px;
+  padding: 0;
+  margin: 0;
   list-style: none;
+  width: calc(100% / 4 - 4px);
+  height: 90px;
+  margin-left: 4px;
+  margin-top: 12px;
+  border-radius: 10px;
   background-color: #000;
   cursor: pointer;
 
-  :nth-last-child {
-    margin-right: 0;
-  }
-
-  :nth-child(2n) {
-    margin-right: 0px;
-  }
-
   @media screen and (min-width: 480px) {
-    width: 90px;
-    height: 100px;
-    padding: 12px;
+    width: calc(100% / 4 - 4px);
+    height: 120px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 110px;
-    height: 130px;
-    padding: 12px;
+    width: calc(100% / 5 - 8px);
+    height: 145px;
+    margin-left: 8px;
+    margin-top: 16px;
   }
 
   @media screen and (min-width: 1200px) {
-    /* width: 140px;
-    height: 160px; */
+    width: calc(100% / 6 - 14px);
+    height: 160px;
+    margin-left: 14px;
+    margin-top: 24px;
   }
 `;
 
 export const SectionItemContent = styled.div`
-  display: inline-flex;
+  /* display: inline; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   flex-direction: column;
+  padding: 8px 4px;
 `;
 
 export const SectionItemLogo = styled.div`

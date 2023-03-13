@@ -56,6 +56,7 @@ export const UserNavItem = styled.li`
   padding-bottom: 15px;
   border-radius: 10px;
   color: #000;
+  background-color: #fff;
   /* border-top: 1px solid #000; */
   border: 1px solid #000;
 

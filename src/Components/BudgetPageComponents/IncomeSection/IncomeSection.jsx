@@ -1,0 +1,58 @@
+import { GiTakeMyMoney } from 'react-icons/gi';
+import { useState } from 'react';
+import { Modal } from 'Components/Common/Modal/Modal';
+import { PageContainer } from 'Components/Common/PageContainer.styled';
+import { SectionsHeader } from 'Components/Common/SectionsHeader/SectionsHeader';
+import data from 'Helpers/sectionsHeaderData.json';
+import income from 'Helpers/incomeData.json';
+import {
+  IncomeSectionContainer,
+  FlexContainer,
+  IncomeSectionWrapper,
+  SectionListWrapper,
+  SectionList,
+  SectionItem,
+  SectionItemContent,
+  SectionItemLogo,
+  SectionItemData,
+  SectionItemDataTitle,
+  SectionItemDataAmount,
+} from './IncomeSection.styled';
+
+export const IncomeSection = () => {
+  const sectionHeaderData = data[4];
+  const [showModal, setShowModal] = useState(false);
+
+  const changeModalStatusHandler = () => {
+    setShowModal(!showModal);
+  };
+
+  return (
+    <IncomeSectionContainer>
+      <PageContainer>
+        {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
+        <FlexContainer>
+          <IncomeSectionWrapper></IncomeSectionWrapper>
+        </FlexContainer>
+        <SectionsHeader data={sectionHeaderData} />
+        <SectionListWrapper>
+          <SectionList>
+            {income.map(({ title, amount }) => (
+              <SectionItem key={title} onClick={changeModalStatusHandler}>
+                <SectionItemContent>
+                  <SectionItemLogo>
+                    <GiTakeMyMoney color="#fff" size={'100%'} />
+                  </SectionItemLogo>
+                  <SectionItemData>
+                    <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                    <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+                  </SectionItemData>
+                </SectionItemContent>
+              </SectionItem>
+            ))}
+          </SectionList>
+        </SectionListWrapper>
+      </PageContainer>
+    </IncomeSectionContainer>
+  );
+};

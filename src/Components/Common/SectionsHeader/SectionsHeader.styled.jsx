@@ -10,6 +10,7 @@ export const SectionsHeaderContainer = styled.div`
   border: 1px solid black;
   border-radius: 10px;
   background-color: #a2a6a3;
+  margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     width: 500px;
