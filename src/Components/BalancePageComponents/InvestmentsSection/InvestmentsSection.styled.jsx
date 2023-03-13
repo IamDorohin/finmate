@@ -13,7 +13,7 @@ export const SectionListWrapper = styled.div`
 
 export const SectionList = styled.ul`
   margin: 0;
-  margin-top: 16px;
+  /* margin-top: 16px; */
   padding-left: 0;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -27,7 +27,7 @@ export const SectionList = styled.ul`
   ::-webkit-scrollbar {
     background-color: #fff;
     border-radius: 10px;
-    height: 8px;
+    height: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
