@@ -1,5 +1,6 @@
 [
   { "title": "Payment accounts", "amount": 600000 },
   { "title": "Investments", "amount": 7000000 },
-  { "title": "Debts", "amount": 330000 }
+  { "title": "Debts", "amount": 330000 },
+  { "title": "Expenses", "amount": 120000 }
 ]

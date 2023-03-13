@@ -1,0 +1,14 @@
+[
+  { "title": "Restaurants", "amount": "20000 / 40000" },
+  { "title": "Food", "amount": "8000 / 15000" },
+  { "title": "Sport", "amount": "10000 / 25000" },
+  { "title": "Entertainment", "amount": "24500 / 48000" },
+  { "title": "Rent", "amount": "38000 / 38000" },
+  { "title": "Gifts", "amount": "40000 / 50000" },
+  { "title": "Subscriptions", "amount": "5000 / 7400" },
+  { "title": "Travels", "amount": "120000 / 150000" },
+  { "title": "Stocks", "amount": "42700 / 50000" },
+  { "title": "Car", "amount": "28000 / 40000" },
+  { "title": "Health", "amount": "20000 / 40000" },
+  { "title": "Clothes", "amount": "33000 / 40000" }
+]
