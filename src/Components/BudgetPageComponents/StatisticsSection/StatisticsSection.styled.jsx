@@ -1,11 +1,28 @@
 import styled from 'styled-components';
 
 export const StatisticsContainer = styled.section`
-  padding-top: 12px;
+  padding: 10px 15px;
+  padding-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: ${props => props.theme.color.primary};
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    padding: 10px 15px;
+    width: ${p => p.theme.breakpoints.mobileM};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    width: ${p => p.theme.breakpoints.tablet};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    width: ${p => p.theme.breakpoints.desktop};
+  }
 `;
 
 export const FlexContainer = styled.div`
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     display: flex;
     justify-content: space-between;
   }
@@ -20,19 +37,19 @@ export const StatisticsDetails = styled.div`
   background-color: #124720;
   border-radius: 20px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 130px;
     width: 290px;
     padding: 16px 30px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     height: 180px;
     width: 520px;
     padding: 20px 30px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     padding: 40px;
     width: 700px;
     height: 200px;

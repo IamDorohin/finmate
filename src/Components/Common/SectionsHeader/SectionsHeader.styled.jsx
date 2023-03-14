@@ -9,15 +9,14 @@ export const SectionsHeaderContainer = styled.div`
   padding-right: 8px;
   border: 1px solid black;
   border-radius: 10px;
-  /* background-color: #a2a6a3; */
-  background-color: ${props => props.theme.color};
+  background-color: ${props => props.theme.color.primary};
   margin-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     width: 520px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     width: 700px;
     height: 40px;
   }
@@ -35,7 +34,7 @@ export const SectionsHeaderAddButton = styled.button`
   background-color: #124720;
   cursor: pointer;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     width: 26px;
     height: 26px;
   }
@@ -54,12 +53,12 @@ export const SectionsHeaderDataTitle = styled.p`
   font-weight: bold;
   font-size: 12px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
-    font-size: 18px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    font-size: 16px;
   }
 `;
 
@@ -68,11 +67,11 @@ export const SectionsHeaderDataAmount = styled.p`
   font-weight: bold;
   font-size: 12px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     font-size: 16px;
   }
 `;

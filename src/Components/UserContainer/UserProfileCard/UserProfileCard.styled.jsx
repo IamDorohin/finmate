@@ -23,7 +23,7 @@ export const UserProfileCardContainer = styled.div`
   border-radius: 20px;
   cursor: pointer;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 130px;
     width: 130px;
     margin: 0;
@@ -33,13 +33,13 @@ export const UserProfileCardContainer = styled.div`
     background-color: #000;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     height: 180px;
     width: 180px;
     padding: 20px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     height: 200px;
     width: 200px;
   }
@@ -63,18 +63,18 @@ export const UserProfileAvatar = styled.div`
   /* background-color: #0cc9eb; */
   background-color: #fff;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: 70px;
     height: 70px;
     background-color: #fff;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     width: 100px;
     height: 100px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     height: 120px;
     width: 120px;
   }
@@ -88,18 +88,18 @@ export const UserProfileNickname = styled.p`
   font-size: 14px;
   color: #fff;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     margin-top: 10px;
     padding: 0;
     font-size: 12px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-top: 16px;
     font-size: 16px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     /* margin-top: 24px;
     font-size: 24px; */
   }
@@ -117,17 +117,17 @@ export const SettingsLogoContainer = styled.div`
   color: #fff;
   cursor: pointer;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     top: 6px;
     right: 6px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     height: 24px;
     width: 24px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     top: 12px;
     right: 12px;
   }

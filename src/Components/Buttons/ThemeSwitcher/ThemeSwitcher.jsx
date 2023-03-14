@@ -24,11 +24,11 @@ export const ThemeSwitcher = ({ onClick }) => {
       <ThemeSwitcherButton type="button" theme={currentAppTheme}>
         {isLightTheme ? (
           <ThemeSwitcherMoonButton>
-            <FiMoon size={12} color="#0cc9eb" />
+            <FiSun size={12} color="#fac507" />
           </ThemeSwitcherMoonButton>
         ) : (
           <ThemeSwitcherSunButton>
-            <FiSun size={12} color="#fac507" />
+            <FiMoon size={12} color="#0cc9eb" />
           </ThemeSwitcherSunButton>
         )}
       </ThemeSwitcherButton>

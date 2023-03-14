@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const PageContainer = styled.div`
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 16px 15px;
+  background-color: ${props => props.theme.color.primary};
 
   @media screen and (min-width: 480px) {
     width: 480px;

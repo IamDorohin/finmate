@@ -13,7 +13,6 @@ export const ModalBackdrop = styled.div`
 
 export const ModalContent = styled.div`
   position: absolute;
-  overflow-y: hidden;
   top: 50%;
   left: 50%;
   padding-left: 15px;
@@ -25,7 +24,7 @@ export const ModalContent = styled.div`
 
   background-color: #fff;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: 400px;
     height: 600px;
     border-radius: 20px;
@@ -37,16 +36,15 @@ export const ModalCloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 16px;
-  right: 26px;
+  top: 10px;
+  right: 10px;
   width: 40px;
   height: 40px;
   border: none;
-  /* border-radius: 5px; */
   background-color: transparent;
   cursor: pointer;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     top: 10px;
     right: 10px;
     width: 30px;

@@ -9,22 +9,12 @@ import { UserNav } from 'Components/SiteNavigation/UserNav/UserNav';
 import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { ThemeSwitcher } from 'Components/Buttons/ThemeSwitcher/ThemeSwitcher';
-import { PageContainer } from 'Components/Common/PageContainer.styled';
 import { MobileMenu } from 'Components/UserMenuMobile/MobileMenu';
 import { SlMenu } from 'react-icons/sl';
 
 export const AppBar = () => {
   const [showModal, setShowModal] = useState(false);
   const smartPhoneDevice = useSelector(deviceSelector);
-
-  useEffect(() => {
-    const appHeaderHeight = document
-      .querySelector('header')
-      .getBoundingClientRect().height;
-
-    if (!showModal) document.body.style.paddingTop = `${appHeaderHeight}px`;
-    console.log('header height', appHeaderHeight);
-  });
 
   useEffect(() => {
     if (!smartPhoneDevice) {
@@ -62,25 +52,23 @@ export const AppBar = () => {
             isOpenedModal={showModal}
           />
         )}
-        <PageContainer>
-          <AppHeaderContainer>
-            <AppLogo onClick={activatedLinkHandler} />
-            {closedMobileMenu ? (
-              <MobileMenuButton
-                isSmartPhone={smartPhoneDevice}
-                isOpenedModal={showModal}
-                onClick={changeModalStatusHandler}
-              >
-                <SlMenu size={18} color="#000" />
-              </MobileMenuButton>
-            ) : (
-              <UserNav />
-            )}
-            {!smartPhoneDevice && (
-              <ThemeSwitcher onClick={() => themeChangeHandler()} />
-            )}
-          </AppHeaderContainer>
-        </PageContainer>
+        <AppHeaderContainer>
+          <AppLogo onClick={activatedLinkHandler} />
+          {closedMobileMenu ? (
+            <MobileMenuButton
+              isSmartPhone={smartPhoneDevice}
+              isOpenedModal={showModal}
+              onClick={changeModalStatusHandler}
+            >
+              <SlMenu size={18} color="#000" />
+            </MobileMenuButton>
+          ) : (
+            <UserNav />
+          )}
+          {!smartPhoneDevice && (
+            <ThemeSwitcher onClick={() => themeChangeHandler()} />
+          )}
+        </AppHeaderContainer>
       </AppHeader>
     </>
   );

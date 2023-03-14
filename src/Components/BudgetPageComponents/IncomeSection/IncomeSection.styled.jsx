@@ -1,7 +1,22 @@
 import styled from 'styled-components';
 
 export const IncomeSectionContainer = styled.section`
-  margin-top: 16px;
+  padding: 10px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: ${props => props.theme.color.primary};
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    width: ${p => p.theme.breakpoints.mobileM};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    width: ${p => p.theme.breakpoints.tablet};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    width: ${p => p.theme.breakpoints.desktop};
+  }
 `;
 
 export const ExpensesSectionWrapper = styled.div``;
@@ -35,18 +50,18 @@ export const SectionItem = styled.li`
   background-color: #000;
   cursor: pointer;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: calc(100% / 4 - 8px);
     height: 120px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     width: calc(100% / 5 - 8px);
     height: 145px;
     padding: 12px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     width: calc(100% / 6 - 8px);
     height: 160px;
   }
@@ -63,12 +78,12 @@ export const SectionItemLogo = styled.div`
   border: 1px solid #fff;
   border-radius: 50%;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 46px;
     width: 46px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     height: 70px;
     width: 70px;
   }
@@ -79,7 +94,7 @@ export const SectionItemData = styled.div`
   margin-top: 8px;
   display: block;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     margin-top: 12px;
   }
 `;
@@ -91,15 +106,15 @@ export const SectionItemDataTitle = styled.p`
   text-align: center;
   color: #fff;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     font-size: 12px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     font-size: 16px;
   }
 `;
@@ -110,15 +125,15 @@ export const SectionItemDataAmount = styled.p`
   text-align: center;
   color: #fff;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     font-size: 12px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     font-size: 16px;
   }
 `;

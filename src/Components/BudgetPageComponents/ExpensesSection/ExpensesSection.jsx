@@ -1,7 +1,6 @@
 import { GiTakeMyMoney } from 'react-icons/gi';
 import { useState } from 'react';
 import { Modal } from 'Components/Common/Modal/Modal';
-import { PageContainer } from 'Components/Common/PageContainer.styled';
 import { SectionsHeader } from 'Components/Common/SectionsHeader/SectionsHeader';
 import data from 'Helpers/sectionsHeaderData.json';
 import expenses from 'Helpers/expensesData.json';
@@ -26,25 +25,23 @@ export const ExpensesSection = () => {
 
   return (
     <ExpensesSectionContainer>
-      <PageContainer>
-        {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
-        <SectionsHeader data={sectionHeaderData} />
-        <SectionListWrapper>
-          <SectionList>
-            {expenses.map(({ title, amount }) => (
-              <SectionItem key={title} onClick={changeModalStatusHandler}>
-                <SectionItemLogo>
-                  <GiTakeMyMoney color="#fff" size={'75%'} />
-                </SectionItemLogo>
-                <SectionItemData>
-                  <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                  <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-                </SectionItemData>
-              </SectionItem>
-            ))}
-          </SectionList>
-        </SectionListWrapper>
-      </PageContainer>
+      {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
+      <SectionsHeader data={sectionHeaderData} />
+      <SectionListWrapper>
+        <SectionList>
+          {expenses.map(({ title, amount }) => (
+            <SectionItem key={title} onClick={changeModalStatusHandler}>
+              <SectionItemLogo>
+                <GiTakeMyMoney color="#fff" size={'75%'} />
+              </SectionItemLogo>
+              <SectionItemData>
+                <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+              </SectionItemData>
+            </SectionItem>
+          ))}
+        </SectionList>
+      </SectionListWrapper>
     </ExpensesSectionContainer>
   );
 };

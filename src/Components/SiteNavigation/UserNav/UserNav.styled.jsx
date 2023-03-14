@@ -10,12 +10,11 @@ export const UserNavContainer = styled.div`
   margin-left: 40px;
   padding: 6px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-left: 304px;
   }
 
-  @media screen and (min-width: 1200px) {
-    /* margin-left: 550px; */
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     margin-left: 400px;
     padding-right: 24px;
   }
@@ -29,10 +28,9 @@ export const UserNavList = styled.ul`
   margin-top: 66px;
   padding-left: 0;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     display: flex;
     flex-wrap: nowrap;
-    /* width: 300px; */
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -50,13 +48,7 @@ export const UserNavItem = styled.li`
   padding-bottom: 15px;
   border-radius: 10px;
   color: #000;
-  background-color: #fff;
-  /* border-top: 1px solid #000; */
   border: 1px solid #000;
-
-  :first-child {
-    /* border-top: 1px solid #000; */
-  }
 
   :not(:first-child) {
     margin-top: 10px;
@@ -67,7 +59,7 @@ export const UserNavItem = styled.li`
     color: #0cc9eb;
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: 70px;
     height: 30px;
     padding: 0;
@@ -81,7 +73,7 @@ export const UserNavItem = styled.li`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     :not(:first-child) {
       margin-top: 0;
       margin-left: 48px;
@@ -99,21 +91,22 @@ export const UserNavLink = styled(NavLink)`
     css`
       color: grey;
       pointer-events: none;
+      text-decoration: line-through;
     `}
 
   &.active {
     color: #fac507;
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     font-size: 16px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     font-size: 20px;
   }
 `;

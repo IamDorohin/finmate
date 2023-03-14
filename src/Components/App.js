@@ -7,8 +7,7 @@ import { changeDeviceType } from 'Redux/Device/slice';
 import { BalancePage } from 'Pages/BalancePage/BalancePage';
 import { BudgetPage } from 'Pages/BudgetPage/BudgetPage';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from 'Theme/lightTheme';
-import { darkTheme } from 'Theme/darkTheme';
+import { lightTheme, darkTheme } from 'Theme/theme';
 import './App.css';
 
 export const App = () => {
@@ -20,8 +19,10 @@ export const App = () => {
   const themeChanging = () => {
     if (currentAppTheme === 'light') {
       theme = lightTheme;
+      document.body.style.backgroundColor = '#ffffff';
     } else {
       theme = darkTheme;
+      document.body.style.backgroundColor = '#232b47';
     }
   };
 

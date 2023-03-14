@@ -8,7 +8,9 @@ export const MobileMenuContainer = styled.div`
   height: 100vh;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #fff;
+  background-color: ${props => props.theme.color.primary};
+
+  transition: background-color 250ms ease-in-out;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;

@@ -11,14 +11,14 @@ export const ThemeSwitcherContainer = styled.div`
   height: 42px;
   background-color: #000;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     position: relative;
     top: 0;
     right: 0;
     margin-left: 16px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     margin-left: 24px;
   }
 `;

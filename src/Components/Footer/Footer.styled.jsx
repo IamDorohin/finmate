@@ -1,7 +1,22 @@
 import styled from 'styled-components';
 
 export const FooterSection = styled.footer`
-  margin-top: 16px;
+  padding: 30px 15px 30px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: ${props => props.theme.color.primary};
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    width: ${p => p.theme.breakpoints.mobileM};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    width: ${p => p.theme.breakpoints.tablet};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    width: ${p => p.theme.breakpoints.desktop};
+  }
 `;
 
 export const FooterContainer = styled.div`
@@ -9,32 +24,25 @@ export const FooterContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 40px;
-  margin-right: 0;
-  margin-left: 0;
-  padding: 16px 0;
-  /* border-top: 1px solid black; */
-  background-color: #fff;
+  margin: 0;
 `;
 
-export const FooterSocialLinksContainer = styled.div`
-  /* display: flex; */
-`;
+export const FooterSocialLinksContainer = styled.div``;
 
 export const FooterSocialLinksTitle = styled.p`
   margin: 0;
   font-size: 10px;
   font-weight: bold;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     font-size: 12px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     font-size: 18px;
   }
 `;
@@ -61,20 +69,20 @@ export const FooterSocialLinksItems = styled.li`
     margin-left: 12px;
   }
 
-  /* @media screen and (min-width: 480px) {
-    height: 14px;
-    width: 14px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
   }
 
-  @media screen and (min-width: 768px) {
-    height: 16px;
-    width: 16px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    &:not(:first-child) {
+      margin-left: 24px;
+    }
   }
 
-  @media screen and (min-width: 1200px) {
-    height: 18px;
-    width: 18px;
-  } */
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+  }
 `;
 
 export const FooterSocialLinks = styled.a`
@@ -89,17 +97,17 @@ export const FooterSocialLinksWrapper = styled.div`
   height: 12px;
   width: 12px;
 
-  @media screen and (min-width: 480px) {
-    height: 14px;
-    width: 14px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    height: 20px;
+    width: 20px;
   }
 
-  @media screen and (min-width: 768px) {
-    height: 16px;
-    width: 16px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    height: 24px;
+    width: 24px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     height: 18px;
     width: 18px;
   }

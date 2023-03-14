@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { deviceSelector } from 'Redux/selectors';
-import { PageContainer } from 'Components/Common/PageContainer.styled';
 import { UserContainer } from 'Components/UserContainer/UserContainer';
 import {
   StatisticsContainer,
@@ -13,12 +12,10 @@ export const StatisticsSection = () => {
 
   return (
     <StatisticsContainer>
-      <PageContainer>
-        <FlexContainer>
-          <StatisticsDetails />
-          {!smartPhoneDevice && <UserContainer />}
-        </FlexContainer>
-      </PageContainer>
+      <FlexContainer>
+        <StatisticsDetails />
+        {!smartPhoneDevice && <UserContainer />}
+      </FlexContainer>
     </StatisticsContainer>
   );
 };

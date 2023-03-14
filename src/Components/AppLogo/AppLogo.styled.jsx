@@ -13,59 +13,55 @@ export const AppLogoLink = styled(Link)`
 
 export const AppLogoIconContainer = styled.div`
   display: flex;
-  padding: 5px;
+  padding: 4px;
   border-radius: 50%;
   background-color: black;
   color: white;
   height: 30px;
   width: 30px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 40px;
     width: 40px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     height: 50px;
     width: 50px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     height: 60px;
     width: 60px;
-  }
-  &:hover,
-  :focus {
-    /* color: #0cc9eb; */
   }
 `;
 
 export const AppLogoPrimaryEl = styled.div`
-  padding-left: 10px;
+  padding-left: 8px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: ${p => p.theme.fontSizes.l}px;
   color: black;
 
-  @media screen and (min-width: 768px) {
-    font-size: 24px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    font-size: ${p => p.theme.fontSizes.xl}px;
   }
 
-  @media screen and (min-width: 1200px) {
-    font-size: 30px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    font-size: ${p => p.theme.fontSizes.xxl}px;
   }
 `;
 
 export const AppLogoSecondaryEl = styled.div`
   padding-left: 5px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: ${p => p.theme.fontSizes.l}px;
   color: black;
 
-  @media screen and (min-width: 768px) {
-    font-size: 24px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    font-size: ${p => p.theme.fontSizes.xl}px;
   }
 
-  @media screen and (min-width: 1200px) {
-    font-size: 30px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    font-size: ${p => p.theme.fontSizes.xxl}px;
   }
 `;

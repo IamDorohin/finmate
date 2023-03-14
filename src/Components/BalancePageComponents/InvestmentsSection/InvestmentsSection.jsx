@@ -11,7 +11,6 @@ import {
   SectionItemDataAmount,
 } from './InvestmentsSection.styled';
 import { SectionsHeader } from 'Components/Common/SectionsHeader/SectionsHeader';
-import { PageContainer } from 'Components/Common/PageContainer.styled';
 import data from 'Helpers/sectionsHeaderData.json';
 import investments from 'Helpers/investmentsData.json';
 import { GiTakeMyMoney } from 'react-icons/gi';
@@ -26,25 +25,23 @@ export const InvestmentsSection = () => {
 
   return (
     <SectionContainer>
-      <PageContainer>
-        {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
-        <SectionsHeader data={sectionHeaderData} />
-        <SectionListWrapper>
-          <SectionList>
-            {investments.map(({ title, amount }) => (
-              <SectionItem key={title} onClick={changeModalStatusHandler}>
-                <SectionItemLogo>
-                  <GiTakeMyMoney color="#fff" size={'100%'} />
-                </SectionItemLogo>
-                <SectionItemData>
-                  <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                  <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-                </SectionItemData>
-              </SectionItem>
-            ))}
-          </SectionList>
-        </SectionListWrapper>
-      </PageContainer>
+      {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
+      <SectionsHeader data={sectionHeaderData} />
+      <SectionListWrapper>
+        <SectionList>
+          {investments.map(({ title, amount }) => (
+            <SectionItem key={title} onClick={changeModalStatusHandler}>
+              <SectionItemLogo>
+                <GiTakeMyMoney color="#fff" size={'100%'} />
+              </SectionItemLogo>
+              <SectionItemData>
+                <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+              </SectionItemData>
+            </SectionItem>
+          ))}
+        </SectionList>
+      </SectionListWrapper>
     </SectionContainer>
   );
 };

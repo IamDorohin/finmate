@@ -6,7 +6,25 @@ export const AppHeader = styled.header`
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #fff;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+
+  background-color: ${p => p.theme.color.primary};
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    position: relative;
+    width: ${p => p.theme.breakpoints.mobileM};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    width: ${p => p.theme.breakpoints.tablet};
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    width: ${p => p.theme.breakpoints.desktop};
+  }
 `;
 
 export const AppHeaderContainer = styled.div`
@@ -14,12 +32,8 @@ export const AppHeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 16px 0;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: #fff;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     justify-content: end;
   }
 `;
