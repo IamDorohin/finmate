@@ -7,12 +7,9 @@ import data from 'Helpers/sectionsHeaderData.json';
 import income from 'Helpers/incomeData.json';
 import {
   IncomeSectionContainer,
-  FlexContainer,
-  IncomeSectionWrapper,
   SectionListWrapper,
   SectionList,
   SectionItem,
-  SectionItemContent,
   SectionItemLogo,
   SectionItemData,
   SectionItemDataTitle,
@@ -31,23 +28,18 @@ export const IncomeSection = () => {
     <IncomeSectionContainer>
       <PageContainer>
         {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
-        <FlexContainer>
-          <IncomeSectionWrapper></IncomeSectionWrapper>
-        </FlexContainer>
         <SectionsHeader data={sectionHeaderData} />
         <SectionListWrapper>
           <SectionList>
             {income.map(({ title, amount }) => (
               <SectionItem key={title} onClick={changeModalStatusHandler}>
-                <SectionItemContent>
-                  <SectionItemLogo>
-                    <GiTakeMyMoney color="#fff" size={'100%'} />
-                  </SectionItemLogo>
-                  <SectionItemData>
-                    <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                    <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-                  </SectionItemData>
-                </SectionItemContent>
+                <SectionItemLogo>
+                  <GiTakeMyMoney color="#fff" size={'100%'} />
+                </SectionItemLogo>
+                <SectionItemData>
+                  <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                  <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+                </SectionItemData>
               </SectionItem>
             ))}
           </SectionList>

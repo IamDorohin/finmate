@@ -33,9 +33,8 @@ export const SettingsCardContainer = styled.div`
   cursor: pointer;
 
   @media screen and (min-width: 480px) {
-    /* position: relative; */
-    height: 135px;
-    width: 135px;
+    height: 130px;
+    width: 130px;
     margin: 0;
     padding: 12px;
     margin-top: 0;
@@ -43,17 +42,15 @@ export const SettingsCardContainer = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
     padding: 20px;
   }
 
   @media screen and (min-width: 1200px) {
-    width: 180px;
-    height: 180px;
-    /* height: 200px;
+    height: 200px;
     width: 200px;
-    padding: 40px; */
+    padding: 40px;
   }
 
   animation: ${props => {
@@ -78,10 +75,8 @@ export const UserProfileLogoContainer = styled.div`
   cursor: pointer;
 
   @media screen and (min-width: 480px) {
-    top: 8px;
-    right: 8px;
-    height: 20px;
-    width: 20px;
+    top: 6px;
+    right: 6px;
   }
 
   @media screen and (min-width: 768px) {
@@ -92,26 +87,16 @@ export const UserProfileLogoContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    /* top: 12px;
+    top: 12px;
     right: 12px;
-    height: 32px;
-    width: 32px; */
   }
 `;
 
 export const SettingsCardContent = styled.div`
-  @media screen and (min-width: 1200px) {
-    font-size: 24px;
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
   }
-
-  opacity: ${props => {
-    switch (props.animation) {
-      case 'false':
-        return '1';
-      case 'true':
-        return '0';
-      default:
-        return;
-    }
-  }};
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `;

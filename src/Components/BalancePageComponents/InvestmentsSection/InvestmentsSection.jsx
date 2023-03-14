@@ -5,7 +5,6 @@ import {
   SectionListWrapper,
   SectionList,
   SectionItem,
-  SectionItemContent,
   SectionItemLogo,
   SectionItemData,
   SectionItemDataTitle,
@@ -34,15 +33,13 @@ export const InvestmentsSection = () => {
           <SectionList>
             {investments.map(({ title, amount }) => (
               <SectionItem key={title} onClick={changeModalStatusHandler}>
-                <SectionItemContent>
-                  <SectionItemLogo>
-                    <GiTakeMyMoney color="#fff" size={'100%'} />
-                  </SectionItemLogo>
-                  <SectionItemData>
-                    <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                    <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-                  </SectionItemData>
-                </SectionItemContent>
+                <SectionItemLogo>
+                  <GiTakeMyMoney color="#fff" size={'100%'} />
+                </SectionItemLogo>
+                <SectionItemData>
+                  <SectionItemDataTitle>{title}</SectionItemDataTitle>
+                  <SectionItemDataAmount>{amount}</SectionItemDataAmount>
+                </SectionItemData>
               </SectionItem>
             ))}
           </SectionList>

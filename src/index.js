@@ -4,10 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from 'Redux/store';
-// import { ThemeProvider } from 'styled-components';
 import './index.css';
 import { App } from './Components/App';
-// import { theme } from 'theme';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,9 +14,7 @@ root.render(
     <BrowserRouter basename="/finmate">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          {/* <ThemeProvider theme={theme}> */}
           <App />
-          {/* </ThemeProvider> */}
         </PersistGate>
       </Provider>
     </BrowserRouter>

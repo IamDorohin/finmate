@@ -12,7 +12,7 @@ export const AppLogo = ({ onClick }) => {
     <AppLogoContainer>
       <AppLogoLink to="/" onClick={() => onClick()}>
         <AppLogoIconContainer>
-          <GiTakeMyMoney color="inherit" size="100%" />
+          <GiTakeMyMoney color="inherit" size={'100%'} />
         </AppLogoIconContainer>
         <AppLogoPrimaryEl>Fin</AppLogoPrimaryEl>
         <AppLogoSecondaryEl>Mate</AppLogoSecondaryEl>

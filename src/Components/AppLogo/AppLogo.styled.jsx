@@ -20,6 +20,20 @@ export const AppLogoIconContainer = styled.div`
   height: 30px;
   width: 30px;
 
+  @media screen and (min-width: 480px) {
+    height: 40px;
+    width: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 50px;
+    width: 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 60px;
+    width: 60px;
+  }
   &:hover,
   :focus {
     /* color: #0cc9eb; */

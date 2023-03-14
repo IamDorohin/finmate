@@ -35,7 +35,7 @@ export const PaymentAccountsSection = () => {
               <SectionItem key={title} onClick={changeModalStatusHandler}>
                 <SectionItemLogo>
                   {/* <SectionItemLogoChanger> */}
-                  <GiTakeMyMoney color="#fff" size={'100%'} />
+                  <GiTakeMyMoney color="#fff" size={'75%'} />
                   {/* </SectionItemLogoChanger> */}
                 </SectionItemLogo>
                 <SectionItemData>

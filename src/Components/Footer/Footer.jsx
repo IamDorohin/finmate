@@ -12,6 +12,7 @@ import {
   FooterSocialLinksWrapper,
 } from './Footer.styled';
 import { PageContainer } from 'Components/Common/PageContainer.styled';
+
 export const Footer = () => {
   return (
     <FooterSection>

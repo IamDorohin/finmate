@@ -9,20 +9,24 @@ export const SectionsHeaderContainer = styled.div`
   padding-right: 8px;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #a2a6a3;
+  /* background-color: #a2a6a3; */
+  background-color: ${props => props.theme.color};
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
-    width: 500px;
+    width: 520px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 700px;
-    height: 30px;
+    height: 40px;
   }
 `;
 
 export const SectionsHeaderAddButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   width: 20px;
   height: 20px;
@@ -69,6 +73,6 @@ export const SectionsHeaderDataAmount = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;

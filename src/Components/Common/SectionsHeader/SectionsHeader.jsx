@@ -20,7 +20,7 @@ export const SectionsHeader = ({ data }) => {
     <SectionsHeaderContainer>
       {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
       <SectionsHeaderAddButton onClick={changeModalStatusHandler}>
-        <TiPlus size={14} color={'#fff'} />
+        <TiPlus size={'75%'} color={'#fff'} />
       </SectionsHeaderAddButton>
       <SectionsHeaderDataContainer>
         <SectionsHeaderDataTitle>{data.title}</SectionsHeaderDataTitle>

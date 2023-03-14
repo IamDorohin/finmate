@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const ThemeSwitcherContainer = styled.div`
-  position: relative;
+  position: absolute;
+  top: 66px;
+  right: 20px;
   display: flex;
   border: 1px solid black;
   border-radius: 24px;
@@ -10,6 +12,9 @@ export const ThemeSwitcherContainer = styled.div`
   background-color: #000;
 
   @media screen and (min-width: 480px) {
+    position: relative;
+    top: 0;
+    right: 0;
     margin-left: 16px;
   }
 
@@ -20,7 +25,7 @@ export const ThemeSwitcherContainer = styled.div`
 
 export const ThemeSwitcherStars = styled.div`
   position: absolute;
-  left: 3px;
+  left: 2px;
   color: #fff;
   width: 15px;
   height: 15px;
@@ -51,8 +56,8 @@ export const ThemeSwitcherStars = styled.div`
 
 export const ThemeSwitcherButton = styled.button`
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 0;
+  left: 0;
   padding: 0;
   width: 18px;
   height: 18px;

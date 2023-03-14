@@ -8,7 +8,9 @@ export const Layout = () => {
     // <PageContainer>
     <>
       <AppBar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
 

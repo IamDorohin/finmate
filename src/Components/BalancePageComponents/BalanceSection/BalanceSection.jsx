@@ -27,7 +27,7 @@ export const HeroSection = () => {
           <BalanceContainer>
             <BalanceSummary>
               <BalanceTitle>Well done, mate!</BalanceTitle>
-              <BalanceContent>Payment balance is positive</BalanceContent>
+              <BalanceContent>Payment balance is positive!</BalanceContent>
               <BalanceAmount>
                 <BalanceAmountContent>8 000 000 ₴</BalanceAmountContent>
               </BalanceAmount>

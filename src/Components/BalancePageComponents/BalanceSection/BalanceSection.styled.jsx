@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BalanceSection = styled.section`
-  margin-top: 16px;
+  padding-top: 12px;
 `;
 
 export const FlexContainer = styled.div`
@@ -15,35 +15,32 @@ export const BalanceContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 92px;
+  height: 120px;
   padding: 12px;
   background-color: #124720;
-  border-radius: 10px;
+  border-radius: 20px;
 
   @media screen and (min-width: 480px) {
-    height: 120px;
-    width: 260px;
-    padding: 20px;
+    height: 130px;
+    width: 290px;
+    padding: 16px 30px;
   }
 
   @media screen and (min-width: 768px) {
-    height: 160px;
-    width: 480px;
-    padding: 20px;
+    height: 180px;
+    width: 520px;
+    padding: 20px 30px;
   }
 
   @media screen and (min-width: 1200px) {
-    /* height: 200px;
-    width: 600px;
-    padding: 40px; */
-    width: 680px;
-    height: 180px;
+    padding: 40px;
+    width: 700px;
+    height: 200px;
   }
 `;
 
 export const BalanceSummary = styled.div`
-  /* display: flex; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   background-color: #124720;
   border-radius: 10px;
 `;
@@ -54,7 +51,11 @@ export const BalanceTitle = styled.p`
   color: #fff;
 
   @media screen and (min-width: 480px) {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -69,7 +70,11 @@ export const BalanceContent = styled.p`
   color: #fff;
 
   @media screen and (min-width: 480px) {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -83,7 +88,12 @@ export const BalanceAmount = styled.div`
   background-color: #000;
   border-radius: 10px;
   width: 134px;
-  height: 28px;
+  height: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: 160px;
+    height: 40px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 200px;
@@ -104,7 +114,11 @@ export const BalanceAmountContent = styled.p`
   font-size: 12px;
 
   @media screen and (min-width: 480px) {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
   }
 
   @media screen and (min-width: 1200px) {

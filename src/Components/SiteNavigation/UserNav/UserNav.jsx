@@ -7,9 +7,9 @@ import {
 } from './UserNav.styled';
 
 const menuItemsContent = [
-  { href: '/balance', text: 'Balance' },
-  { href: '/budget', text: 'Budget' },
-  { href: '/stocks', text: 'Stocks' },
+  { href: '/balance', text: 'Balance', status: 'true' },
+  { href: '/budget', text: 'Budget', status: 'true' },
+  { href: '/stocks', text: 'Stocks', status: 'false' },
 ];
 
 export const UserNav = () => {
@@ -17,9 +17,11 @@ export const UserNav = () => {
     <UserNavContainer>
       <UserNavMenu>
         <UserNavList>
-          {menuItemsContent.map(({ href, text }) => (
+          {menuItemsContent.map(({ href, text, status }) => (
             <UserNavItem key={text}>
-              <UserNavLink to={href}>{text}</UserNavLink>
+              <UserNavLink to={href} status={status}>
+                {text}
+              </UserNavLink>
             </UserNavItem>
           ))}
         </UserNavList>

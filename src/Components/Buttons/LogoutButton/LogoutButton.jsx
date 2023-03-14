@@ -1,10 +1,12 @@
 import { FiLogOut } from 'react-icons/fi';
-import { LogoutButtonEl } from './LogoutButton.styled';
+import { LogoutContainer, LogoutButtonWrapper } from './LogoutButton.styled';
 
 export const LogoutButton = () => {
   return (
-    <LogoutButtonEl>
-      <FiLogOut size={16} />
-    </LogoutButtonEl>
+    <LogoutContainer>
+      <LogoutButtonWrapper>
+        <FiLogOut size={'100%'} />
+      </LogoutButtonWrapper>
+    </LogoutContainer>
   );
 };

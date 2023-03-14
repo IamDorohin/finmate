@@ -16,17 +16,16 @@ export const UserProfileCardContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #000;
   background-color: #000;
 
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
 
   @media screen and (min-width: 480px) {
-    /* position: relative; */
-    height: 135px;
-    width: 135px;
+    height: 130px;
+    width: 130px;
     margin: 0;
     padding: 12px;
     margin-top: 0;
@@ -35,17 +34,14 @@ export const UserProfileCardContainer = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
     padding: 20px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 180px;
-    width: 180px;
-    /* height: 200px;
+    height: 200px;
     width: 200px;
-    padding: 40px; */
   }
 
   animation: ${props => {
@@ -58,8 +54,8 @@ export const UserProfileCardContainer = styled.div`
 `;
 
 export const UserProfileAvatar = styled.div`
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #000;
@@ -68,25 +64,25 @@ export const UserProfileAvatar = styled.div`
   background-color: #fff;
 
   @media screen and (min-width: 480px) {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: #fff;
   }
 
   @media screen and (min-width: 768px) {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   @media screen and (min-width: 1200px) {
-    /* height: 150px;
-    width: 150px; */
+    height: 120px;
+    width: 120px;
   }
 `;
 
 export const UserProfileNickname = styled.p`
   margin: 0;
-  margin-top: 30px;
+  margin-top: 24px;
   text-align: center;
   font-weight: bold;
   font-size: 14px;
@@ -95,12 +91,12 @@ export const UserProfileNickname = styled.p`
   @media screen and (min-width: 480px) {
     margin-top: 10px;
     padding: 0;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   @media screen and (min-width: 768px) {
     margin-top: 16px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -118,20 +114,12 @@ export const SettingsLogoContainer = styled.div`
   justify-content: center;
   height: 16px;
   width: 16px;
-  /* border: 1px solid #fff; */
   color: #fff;
   cursor: pointer;
 
-  /* :hover,
-  :focus {
-    animation: ${rotate} 3s infinite linear;
-  } */
-
   @media screen and (min-width: 480px) {
-    top: 8px;
-    right: 8px;
-    height: 20px;
-    width: 20px;
+    top: 6px;
+    right: 6px;
   }
 
   @media screen and (min-width: 768px) {
@@ -140,10 +128,8 @@ export const SettingsLogoContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    /* top: 12px;
+    top: 12px;
     right: 12px;
-    height: 32px;
-    width: 32px; */
   }
 `;
 
