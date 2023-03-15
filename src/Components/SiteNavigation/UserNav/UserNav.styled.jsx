@@ -6,7 +6,7 @@ export const UserNavContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  border-right: 1px solid black;
+  border-right: 1px solid ${p => p.theme.colors.bwInverted};
   margin-left: 40px;
   padding: 6px;
 
@@ -46,9 +46,9 @@ export const UserNavItem = styled.li`
   height: 60px;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-radius: 10px;
-  color: #000;
-  border: 1px solid #000;
+  border-radius: ${p => p.theme.radii.m};
+  /* color: #000; */
+  border: 1px solid black;
 
   :not(:first-child) {
     margin-top: 10px;
@@ -56,7 +56,7 @@ export const UserNavItem = styled.li`
 
   :hover,
   :focus {
-    color: #0cc9eb;
+    color: ${p => p.theme.colors.hoverColor};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -84,7 +84,7 @@ export const UserNavItem = styled.li`
 export const UserNavLink = styled(NavLink)`
   text-decoration: none;
   color: inherit;
-  font-size: 14px;
+  font-size: ${p => p.theme.fontSizes.sm};
 
   ${props =>
     props.status === 'false' &&
@@ -95,18 +95,18 @@ export const UserNavLink = styled(NavLink)`
     `}
 
   &.active {
-    color: #fac507;
+    color: ${p => p.theme.colors.activeLink};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.sm};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: 16px;
+    font-size: ${p => p.theme.fontSizes.m};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: 20px;
+    font-size: ${p => p.theme.fontSizes.l};
   }
 `;

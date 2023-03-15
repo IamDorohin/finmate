@@ -5,7 +5,7 @@ export const BalanceSection = styled.section`
   padding-top: 70px;
   margin-right: auto;
   margin-left: auto;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.colors.primaryBackground};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     padding: 10px 15px;
@@ -57,51 +57,47 @@ export const BalanceContainer = styled.div`
 `;
 
 export const BalanceSummary = styled.div`
-  background-color: #124720;
-  border-radius: 10px;
+  background-color: ${p => p.theme.colors.balanceBackground};
+  border-radius: ${p => p.theme.radii.m};
 `;
 
 export const BalanceTitle = styled.p`
   margin: 0;
-  font-size: 12px;
-  color: #fff;
+  font-size: ${p => p.theme.fontSizes.s};
+  color: ${p => p.theme.colors.statisticText};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.sm};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: 20px;
-  }
-
-  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    font-size: ${p => p.theme.fontSizes.l};
   }
 `;
 
 export const BalanceContent = styled.p`
   margin: 0;
   margin-top: 16px;
-  font-size: 12px;
-  color: #fff;
+  font-size: ${p => p.theme.fontSizes.s};
+  color: ${p => p.theme.colors.statisticText};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.sm};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: 20px;
+    font-size: ${p => p.theme.fontSizes.l};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: 20px;
     margin-top: 26px;
   }
 `;
 
 export const BalanceAmount = styled.div`
   margin-top: 16px;
-  background-color: #000;
-  border-radius: 10px;
+  background-color: ${p => p.theme.colors.logoBackground};
+  border-radius: ${p => p.theme.radii.m};
   width: 134px;
   height: 30px;
 
@@ -123,19 +119,18 @@ export const BalanceAmountContent = styled.p`
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #fff;
-  font-size: 12px;
+  color: ${p => p.theme.colors.logoColor};
+  font-size: ${p => p.theme.fontSizes.s};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.sm};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: 20px;
+    font-size: ${p => p.theme.fontSizes.l};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: 20px;
     margin-top: 26px;
   }
 `;
@@ -147,8 +142,8 @@ export const BalanceChartContainer = styled.div`
   width: 90px;
   height: 90px;
   border: 1px solid #000;
-  border-radius: 10px;
-  background-color: #000;
+  border-radius: ${p => p.theme.radii.m};
+  background-color: ${p => p.theme.colors.logoBackground};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: 110px;

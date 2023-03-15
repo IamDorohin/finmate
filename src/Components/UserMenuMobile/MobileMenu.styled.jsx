@@ -8,7 +8,7 @@ export const MobileMenuContainer = styled.div`
   height: 100vh;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.colors.primaryBackground};
 
   transition: background-color 250ms ease-in-out;
 
@@ -36,12 +36,20 @@ export const MobileMenuHeader = styled.div`
   padding-bottom: 16px;
 `;
 
-export const MobileMenuButtonsContainer = styled.div`
+export const MobileMenuButton = styled.button`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 180px;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: ${p => p.theme.radii.s};
+  background-color: transparent;
+  color: ${p => p.theme.colors.iconColor};
+
+  :hover,
+  :focus {
+    color: ${p => p.theme.colors.hoverColor};
+  }
 `;

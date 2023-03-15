@@ -5,7 +5,7 @@ export const StatisticsContainer = styled.section`
   padding-top: 70px;
   margin-right: auto;
   margin-left: auto;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.colors.primaryBackground};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     padding: 10px 15px;
@@ -34,8 +34,8 @@ export const StatisticsDetails = styled.div`
   align-items: center;
   height: 120px;
   padding: 12px;
-  background-color: #124720;
-  border-radius: 20px;
+  background-color: ${p => p.theme.colors.balanceBackground};
+  border-radius: ${p => p.theme.radii.l};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 130px;

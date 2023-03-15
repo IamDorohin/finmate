@@ -11,7 +11,7 @@ export const AppHeader = styled.header`
   margin-left: auto;
   padding: 15px;
 
-  background-color: ${p => p.theme.color.primary};
+  background-color: ${p => p.theme.colors.primaryBackground};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     position: relative;

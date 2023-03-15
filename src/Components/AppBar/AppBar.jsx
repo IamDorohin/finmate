@@ -6,7 +6,7 @@ import { deviceSelector } from 'Redux/selectors';
 
 import { AppHeader, AppHeaderContainer } from './AppBar.styled';
 import { UserNav } from 'Components/SiteNavigation/UserNav/UserNav';
-import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
+import { MobileMenuButton } from 'Components/UserMenuMobile/MobileMenu.styled';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { ThemeSwitcher } from 'Components/Buttons/ThemeSwitcher/ThemeSwitcher';
 import { MobileMenu } from 'Components/UserMenuMobile/MobileMenu';
@@ -60,7 +60,7 @@ export const AppBar = () => {
               isOpenedModal={showModal}
               onClick={changeModalStatusHandler}
             >
-              <SlMenu size={18} color="#000" />
+              <SlMenu size={18} />
             </MobileMenuButton>
           ) : (
             <UserNav />

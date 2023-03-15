@@ -7,9 +7,10 @@ export const SectionsHeaderContainer = styled.div`
   padding: 4px 8px;
   padding-left: 8px;
   padding-right: 8px;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: ${props => props.theme.color.primary};
+  /* border: 1px solid black; */
+  border: ${p => p.theme.borders.sectionsHeader};
+  border-radius: ${p => p.theme.radii.m};
+  background-color: transparent;
   margin-bottom: 16px;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
@@ -30,8 +31,8 @@ export const SectionsHeaderAddButton = styled.button`
   width: 20px;
   height: 20px;
   border: transparent;
-  border-radius: 4px;
-  background-color: #124720;
+  border-radius: ${p => p.theme.radii.xs};
+  background-color: ${p => p.theme.colors.balanceBackground};
   cursor: pointer;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
@@ -51,27 +52,29 @@ export const SectionsHeaderDataContainer = styled.div`
 export const SectionsHeaderDataTitle = styled.p`
   margin: 0;
   font-weight: bold;
-  font-size: 12px;
+  font-size: ${p => p.theme.fontSizes.s};
+  color: ${p => p.theme.colors.primaryText};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.sm};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: 16px;
+    font-size: ${p => p.theme.fontSizes.m};
   }
 `;
 
 export const SectionsHeaderDataAmount = styled.p`
   margin: 0;
   font-weight: bold;
-  font-size: 12px;
+  font-size: ${p => p.theme.fontSizes.s};
+  color: ${p => p.theme.colors.primaryText};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.sm};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: 16px;
+    font-size: ${p => p.theme.fontSizes.m};
   }
 `;

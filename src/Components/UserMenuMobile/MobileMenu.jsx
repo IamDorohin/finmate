@@ -7,17 +7,20 @@ import {
   UserNavItem,
   UserNavLink,
 } from 'Components/SiteNavigation/UserNav/UserNav.styled';
-import { MobileMenuContainer, MobileMenuHeader } from './MobileMenu.styled';
-import { MobileMenuButton } from 'Components/Buttons/MobileMenuButton/MobileMenuButton';
+import {
+  MobileMenuContainer,
+  MobileMenuHeader,
+  MobileMenuButton,
+} from './MobileMenu.styled';
 import { SupportContact } from 'Components/Common/SupportContact/SupportContact';
 import { themeSelector } from 'Redux/selectors';
 import { VscChromeClose } from 'react-icons/vsc';
 import { UserContainer } from 'Components/UserContainer/UserContainer';
 
 const menuItemsContent = [
-  { href: 'balance', text: 'Balance' },
-  { href: 'budget', text: 'Budget' },
-  { href: 'stocks', text: 'Stocks' },
+  { href: '/balance', text: 'Balance', status: 'true' },
+  { href: '/budget', text: 'Budget', status: 'true' },
+  { href: '/stocks', text: 'Stocks', status: 'false' },
 ];
 
 export const MobileMenu = ({ onClick, onLinkClick, isOpenedModal }) => {
@@ -38,13 +41,17 @@ export const MobileMenu = ({ onClick, onLinkClick, isOpenedModal }) => {
       <MobileMenuHeader>
         <AppLogo />
         <MobileMenuButton type="button" onClick={onClick}>
-          <VscChromeClose size={20} color="#000" />
+          <VscChromeClose size={20} />
         </MobileMenuButton>
       </MobileMenuHeader>
       <UserNavList>
-        {menuItemsContent.map(({ href, text }) => (
+        {menuItemsContent.map(({ href, text, status }) => (
           <UserNavItem key={text}>
-            <UserNavLink to={href} onClick={() => onLinkClick()}>
+            <UserNavLink
+              to={href}
+              status={status}
+              onClick={() => onLinkClick()}
+            >
               {text}
             </UserNavLink>
           </UserNavItem>
@@ -52,9 +59,6 @@ export const MobileMenu = ({ onClick, onLinkClick, isOpenedModal }) => {
       </UserNavList>
       <UserContainer />
       <SupportContact />
-      {/* <MobileMenuButtonsContainer>
-        <LogoutButton />
-      </MobileMenuButtonsContainer> */}
     </MobileMenuContainer>
   );
 };

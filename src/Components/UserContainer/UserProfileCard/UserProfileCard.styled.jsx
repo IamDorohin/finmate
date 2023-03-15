@@ -17,10 +17,10 @@ export const UserProfileCardContainer = styled.div`
   margin-right: auto;
   margin-top: 20px;
   padding: 12px;
-  border: 1px solid #000;
-  background-color: #000;
+  border: 1px solid black;
+  background-color: ${p => p.theme.colors.logoBackground};
 
-  border-radius: 20px;
+  border-radius: ${p => p.theme.radii.l};
   cursor: pointer;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -29,8 +29,8 @@ export const UserProfileCardContainer = styled.div`
     margin: 0;
     padding: 12px;
     margin-top: 0;
-    border: 1px solid #000;
-    background-color: #000;
+    border: 1px solid black;
+    background-color: ${p => p.theme.colors.logoBackground};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
@@ -58,15 +58,15 @@ export const UserProfileAvatar = styled.div`
   height: 100px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #000;
-  border-radius: 50%;
+  border: 1px solid black;
+  border-radius: ${p => p.theme.radii.round};
   /* background-color: #0cc9eb; */
-  background-color: #fff;
+  background-color: ${p => p.theme.colors.logoColor};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: 70px;
     height: 70px;
-    background-color: #fff;
+    background-color: ${p => p.theme.colors.logoColor};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
@@ -85,23 +85,18 @@ export const UserProfileNickname = styled.p`
   margin-top: 24px;
   text-align: center;
   font-weight: bold;
-  font-size: 14px;
-  color: #fff;
+  font-size: ${p => p.theme.fontSizes.sm};
+  color: ${p => p.theme.colors.logoColor};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     margin-top: 10px;
     padding: 0;
-    font-size: 12px;
+    font-size: ${p => p.theme.fontSizes.s};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-top: 16px;
-    font-size: 16px;
-  }
-
-  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    /* margin-top: 24px;
-    font-size: 24px; */
+    font-size: ${p => p.theme.fontSizes.m};
   }
 `;
 
@@ -114,7 +109,7 @@ export const SettingsLogoContainer = styled.div`
   justify-content: center;
   height: 16px;
   width: 16px;
-  color: #fff;
+  color: ${p => p.theme.colors.logoColor};
   cursor: pointer;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -140,8 +135,8 @@ export const CardsContainer = styled.div`
   margin-right: auto;
   margin-top: 20px;
   padding: 15px;
-  border: 2px solid #000;
-  border-radius: 20px;
+  border: 2px solid black;
+  border-radius: ${p => p.theme.radii.l};
 `;
 
 // @media screen and (min-width: 480px) {

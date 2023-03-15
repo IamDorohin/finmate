@@ -23,13 +23,12 @@ export const SettingsCardContainer = styled.div`
   margin-top: 20px;
   padding: 15px;
 
-  /* border: 3px solid #0cc9eb; */
-  border: 1px solid #000;
+  border: 1px solid black;
 
-  border-radius: 20px;
+  border-radius: ${p => p.theme.radii.l};
   font-weight: bold;
-  background-color: #000;
-  color: #fff;
+  background-color: ${p => p.theme.colors.logoBackground};
+  color: ${p => p.theme.colors.logoColor};
   cursor: pointer;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -38,7 +37,7 @@ export const SettingsCardContainer = styled.div`
     margin: 0;
     padding: 12px;
     margin-top: 0;
-    border: 1px solid #000;
+    border: 1px solid black;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
@@ -71,7 +70,7 @@ export const UserProfileLogoContainer = styled.div`
   right: 8px;
   height: 16px;
   width: 16px;
-  color: #fff;
+  color: ${p => p.theme.colors.logoColor};
   cursor: pointer;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -94,9 +93,9 @@ export const UserProfileLogoContainer = styled.div`
 
 export const SettingsCardContent = styled.div`
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    font-size: 12px;
+    font-size: ${p => p.theme.fontSizes.s};
   }
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: 20px;
+    font-size: ${p => p.theme.fontSizes.l};
   }
 `;

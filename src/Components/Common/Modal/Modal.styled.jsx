@@ -8,7 +8,7 @@ export const ModalBackdrop = styled.div`
   height: 100vh;
   overflow: hidden;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: ${p => p.theme.colors.modalBackdropColor};
 `;
 
 export const ModalContent = styled.div`
@@ -22,12 +22,12 @@ export const ModalContent = styled.div`
   height: 100vh;
   overflow: hidden;
 
-  background-color: #fff;
+  background-color: ${p => p.theme.colors.primaryBackground};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     width: 400px;
     height: 600px;
-    border-radius: 20px;
+    border-radius: ${p => p.theme.radii.l};
   }
 `;
 
@@ -42,6 +42,7 @@ export const ModalCloseButton = styled.button`
   height: 40px;
   border: none;
   background-color: transparent;
+  color: ${p => p.theme.colors.iconColor};
   cursor: pointer;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {

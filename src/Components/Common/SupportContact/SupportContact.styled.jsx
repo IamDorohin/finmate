@@ -9,14 +9,16 @@ export const SupportContactContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: 24px;
-  border-top: 1px solid #000;
+  border-top: 1px solid black;
 `;
 
-export const SupportContactLogo = styled.div``;
+export const SupportContactLogo = styled.div`
+  color: ${p => p.theme.colors.iconColor};
+`;
 
 export const SupportContactLink = styled.a`
   text-decoration: none;
-  font-size: 14px;
+  font-size: ${p => p.theme.fontSizes.sm};
   margin-left: 8px;
-  color: #000;
+  color: ${p => p.theme.colors.primaryText};
 `;

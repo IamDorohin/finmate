@@ -43,7 +43,7 @@ export const Modal = ({ children, onClose }) => {
     <ModalBackdrop onClick={backdropCloseModalHandler}>
       <ModalContent>
         <ModalCloseButton onClick={onClose}>
-          <VscChromeClose size={'100%'} color="#000" />
+          <VscChromeClose size={'100%'} />
         </ModalCloseButton>
         {children}
       </ModalContent>

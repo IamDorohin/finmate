@@ -1,19 +1,10 @@
 import { useState } from 'react';
 import { Modal } from 'Components/Common/Modal/Modal';
-import {
-  SectionContainer,
-  SectionListWrapper,
-  SectionList,
-  SectionItem,
-  SectionItemLogo,
-  SectionItemData,
-  SectionItemDataTitle,
-  SectionItemDataAmount,
-} from './DebtsSection.styled';
+import { SectionContainer, SectionListWrapper } from './DebtsSection.styled';
 import { SectionsHeader } from 'Components/Common/SectionsHeader/SectionsHeader';
-import data from 'Helpers/sectionsHeaderData.json';
-import debts from 'Helpers/debtsData.json';
-import { GiTakeMyMoney } from 'react-icons/gi';
+import { BalancePageSectionItems } from 'Components/Common/SectionsItems/BalancePageSectionItems/BalancePageSectionItems';
+import data from 'TestingData/sectionsHeaderData.json';
+import debts from 'TestingData/debtsData.json';
 
 export const DebtsSection = () => {
   const sectionHeaderData = data[2];
@@ -28,21 +19,10 @@ export const DebtsSection = () => {
       {showModal && <Modal onClose={changeModalStatusHandler}></Modal>}
       <SectionsHeader data={sectionHeaderData} />
       <SectionListWrapper>
-        <SectionList>
-          {debts.map(({ title, amount }) => (
-            <SectionItem key={title} onClick={changeModalStatusHandler}>
-              <SectionItemLogo>
-                {/* <SectionItemLogoChanger> */}
-                <GiTakeMyMoney color="#fff" size={'100%'} />
-                {/* </SectionItemLogoChanger> */}
-              </SectionItemLogo>
-              <SectionItemData>
-                <SectionItemDataTitle>{title}</SectionItemDataTitle>
-                <SectionItemDataAmount>{amount}</SectionItemDataAmount>
-              </SectionItemData>
-            </SectionItem>
-          ))}
-        </SectionList>
+        <BalancePageSectionItems
+          sectionData={debts}
+          modalStatusHandler={changeModalStatusHandler}
+        ></BalancePageSectionItems>
       </SectionListWrapper>
     </SectionContainer>
   );

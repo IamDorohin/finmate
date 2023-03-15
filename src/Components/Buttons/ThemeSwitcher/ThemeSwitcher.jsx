@@ -19,7 +19,7 @@ export const ThemeSwitcher = ({ onClick }) => {
   return (
     <ThemeSwitcherContainer onClick={onClick}>
       <ThemeSwitcherStars theme={currentAppTheme}>
-        <WiStars size={'100%'} />
+        <WiStars size={'100%'} color="#fff" />
       </ThemeSwitcherStars>
       <ThemeSwitcherButton type="button" theme={currentAppTheme}>
         {isLightTheme ? (

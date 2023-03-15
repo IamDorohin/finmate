@@ -9,7 +9,12 @@ export const ThemeSwitcherContainer = styled.div`
   border-radius: 24px;
   width: 20px;
   height: 42px;
-  background-color: #000;
+  background-color: ${p => p.theme.colors.switcherBackground};
+
+  :hover,
+  :focus {
+    border-color: ${p => p.theme.colors.themeSwitcerHoverColor};
+  }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     position: relative;
@@ -26,7 +31,6 @@ export const ThemeSwitcherContainer = styled.div`
 export const ThemeSwitcherStars = styled.div`
   position: absolute;
   left: 2px;
-  color: #fff;
   width: 15px;
   height: 15px;
   transform: translateX(2px);

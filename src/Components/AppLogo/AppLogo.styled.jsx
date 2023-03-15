@@ -15,8 +15,8 @@ export const AppLogoIconContainer = styled.div`
   display: flex;
   padding: 4px;
   border-radius: 50%;
-  background-color: black;
-  color: white;
+  background-color: ${p => p.theme.colors.logoBackground};
+  color: ${p => p.theme.colors.logoColor};
   height: 30px;
   width: 30px;
 
@@ -39,29 +39,29 @@ export const AppLogoIconContainer = styled.div`
 export const AppLogoPrimaryEl = styled.div`
   padding-left: 8px;
   font-weight: bold;
-  font-size: ${p => p.theme.fontSizes.l}px;
-  color: black;
+  font-size: ${p => p.theme.fontSizes.l};
+  color: ${p => p.theme.colors.logoText};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: ${p => p.theme.fontSizes.xl}px;
+    font-size: ${p => p.theme.fontSizes.xl};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: ${p => p.theme.fontSizes.xxl}px;
+    font-size: ${p => p.theme.fontSizes.xxl};
   }
 `;
 
 export const AppLogoSecondaryEl = styled.div`
   padding-left: 5px;
   font-weight: bold;
-  font-size: ${p => p.theme.fontSizes.l}px;
-  color: black;
+  font-size: ${p => p.theme.fontSizes.l};
+  color: ${p => p.theme.colors.logoText};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    font-size: ${p => p.theme.fontSizes.xl}px;
+    font-size: ${p => p.theme.fontSizes.xl};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
-    font-size: ${p => p.theme.fontSizes.xxl}px;
+    font-size: ${p => p.theme.fontSizes.xxl};
   }
 `;
