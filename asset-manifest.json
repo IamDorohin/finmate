@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/finmate/static/css/main.e1506ec4.css",
-    "main.js": "/finmate/static/js/main.75dafb7f.js",
+    "main.js": "/finmate/static/js/main.373cd932.js",
     "index.html": "/finmate/index.html",
     "main.e1506ec4.css.map": "/finmate/static/css/main.e1506ec4.css.map",
-    "main.75dafb7f.js.map": "/finmate/static/js/main.75dafb7f.js.map"
+    "main.373cd932.js.map": "/finmate/static/js/main.373cd932.js.map"
   },
   "entrypoints": [
     "static/css/main.e1506ec4.css",
-    "static/js/main.75dafb7f.js"
+    "static/js/main.373cd932.js"
   ]
 }
