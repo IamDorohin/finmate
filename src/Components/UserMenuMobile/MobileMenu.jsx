@@ -7,6 +7,8 @@ import {
   UserNavList,
   UserNavItem,
   UserNavLink,
+  UserNavLinkDescription,
+  UserNavLinkDecor,
 } from 'Components/SiteNavigation/UserNav/UserNav.styled';
 import {
   MobileMenuContainer,
@@ -59,6 +61,12 @@ export const MobileMenu = ({ onClick, onLinkClick, isOpenedModal }) => {
               onClick={() => onLinkClick()}
             >
               {text}
+              {status === 'false' && (
+                <>
+                  <UserNavLinkDecor />
+                  <UserNavLinkDescription>Coming soon</UserNavLinkDescription>
+                </>
+              )}
             </UserNavLink>
           </UserNavItem>
         ))}

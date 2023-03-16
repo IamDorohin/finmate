@@ -18,6 +18,15 @@ export const Modal = ({ children, onClose }) => {
     };
   });
 
+  useEffect(() => {
+    window.addEventListener('keydown', escCloseModalHandler);
+
+    return () => {
+      window.removeEventListener('keydown', escCloseModalHandler);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const escCloseModalHandler = e => {
     if (e.code === 'Escape') {
       onClose();
@@ -29,15 +38,6 @@ export const Modal = ({ children, onClose }) => {
       onClose();
     }
   };
-
-  useEffect(() => {
-    window.addEventListener('keydown', escCloseModalHandler);
-
-    return () => {
-      window.removeEventListener('keydown', escCloseModalHandler);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return createPortal(
     <ModalBackdrop onClick={backdropCloseModalHandler}>

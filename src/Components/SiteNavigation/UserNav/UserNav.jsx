@@ -5,6 +5,7 @@ import {
   UserNavItem,
   UserNavLink,
   UserNavLinkDescription,
+  UserNavLinkDecor,
 } from './UserNav.styled';
 
 const menuItemsContent = [
@@ -23,7 +24,10 @@ export const UserNav = () => {
               <UserNavLink to={href} status={status}>
                 {text}
                 {status === 'false' && (
-                  <UserNavLinkDescription>Coming soon</UserNavLinkDescription>
+                  <>
+                    <UserNavLinkDecor />
+                    <UserNavLinkDescription>Coming soon</UserNavLinkDescription>
+                  </>
                 )}
               </UserNavLink>
             </UserNavItem>

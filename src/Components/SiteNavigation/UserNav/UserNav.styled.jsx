@@ -44,8 +44,9 @@ export const UserNavItem = styled.li`
   margin-right: auto;
   width: 180px;
   height: 60px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
+  padding: 0;
   border-radius: ${p => p.theme.radii.m};
   border: 1px solid black;
   transition: color 250ms ease-in-out;
@@ -83,6 +84,12 @@ export const UserNavItem = styled.li`
 
 export const UserNavLink = styled(NavLink)`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
 
   text-decoration: none;
   color: ${p => p.theme.colors.bwInverted};
@@ -121,17 +128,51 @@ export const UserNavLinkDescription = styled.p`
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 15;
-  left: 0;
-  font-size: 9px;
+  top: 30px;
+  left: 57px;
+  font-size: ${p => p.theme.fontSizes.hoverS};
   color: ${p => p.theme.colors.acentColor};
   visibility: hidden;
-  transform: translateY(-100%);
 
-  transition: visibility 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: visibility 250ms ease-in-out, top 250ms ease-in-out;
 
   ${UserNavItem}:hover & {
     visibility: visible;
-    transform: translateY(0%);
+    top: 40px;
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    top: 15px;
+    left: 5px;
+
+    ${UserNavItem}:hover & {
+      visibility: visible;
+      top: 28px;
+    }
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
+    font-size: ${p => p.theme.fontSizes.hoverM};
+    left: 4px;
+  }
+`;
+
+export const UserNavLinkDecor = styled.div`
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  height: 2px;
+  width: 0px;
+  background-color: ${p => p.theme.colors.acentColor};
+
+  transition: width 250ms ease-in-out;
+
+  ${UserNavItem}:hover & {
+    width: 58px;
+  }
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    top: 15px;
+    left: 7px;
   }
 `;

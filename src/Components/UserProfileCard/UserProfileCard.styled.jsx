@@ -110,7 +110,6 @@ export const UserProfileHint = styled.p`
 
   ${UserProfileMainInfo}:hover & {
     animation: ${anim} 2s 1 linear;
-    /* opacity: 1; */
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {

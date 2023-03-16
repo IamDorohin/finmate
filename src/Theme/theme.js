@@ -38,6 +38,8 @@ export const lightTheme = {
     l: '20px',
     xl: '24px',
     xxl: '30px',
+    hoverS: '9px',
+    hoverM: '10px',
   },
   radii: {
     none: '0',
@@ -92,6 +94,8 @@ export const darkTheme = {
     l: '20px',
     xl: '24px',
     xxl: '30px',
+    hoverS: '9px',
+    hoverM: '10px',
   },
   radii: {
     none: '0',

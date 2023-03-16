@@ -6,7 +6,7 @@ export const ModalBackdrop = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 999;
   background-color: ${p => p.theme.colors.modalBackdropColor};
 `;
@@ -44,6 +44,14 @@ export const ModalCloseButton = styled.button`
   background-color: transparent;
   color: ${p => p.theme.colors.iconColor};
   cursor: pointer;
+
+  transition: transform 250ms ease-in-out, color 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    color: ${p => p.theme.colors.acentColor};
+  }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     top: 10px;

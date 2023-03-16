@@ -13,21 +13,21 @@ import { MobileMenu } from 'Components/UserMenuMobile/MobileMenu';
 import { SlMenu } from 'react-icons/sl';
 
 export const AppBar = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const smartPhoneDevice = useSelector(deviceSelector);
 
   useEffect(() => {
     if (!smartPhoneDevice) {
-      setShowModal(false);
+      setShowMobileMenu(false);
     }
   }, [smartPhoneDevice]);
 
-  const changeModalStatusHandler = () => {
-    setShowModal(!showModal);
+  const mobileMenuStatusHandler = () => {
+    setShowMobileMenu(!showMobileMenu);
   };
 
   const activatedLinkHandler = () => {
-    setShowModal(false);
+    setShowMobileMenu(false);
   };
 
   const currentAppTheme = useSelector(themeSelector);
@@ -41,15 +41,15 @@ export const AppBar = () => {
     }
   };
 
-  const closedMobileMenu = smartPhoneDevice & !showModal;
+  const closedMobileMenu = smartPhoneDevice & !showMobileMenu;
   return (
     <>
       <AppHeader>
-        {showModal && (
+        {showMobileMenu && (
           <MobileMenu
-            onClick={changeModalStatusHandler}
+            onClick={mobileMenuStatusHandler}
             onLinkClick={activatedLinkHandler}
-            isOpenedModal={showModal}
+            isOpenedModal={showMobileMenu}
           />
         )}
         <AppHeaderContainer>
@@ -57,8 +57,8 @@ export const AppBar = () => {
           {closedMobileMenu ? (
             <MobileMenuButton
               isSmartPhone={smartPhoneDevice}
-              isOpenedModal={showModal}
-              onClick={changeModalStatusHandler}
+              isOpenedModal={showMobileMenu}
+              onClick={mobileMenuStatusHandler}
             >
               <SlMenu size={18} />
             </MobileMenuButton>

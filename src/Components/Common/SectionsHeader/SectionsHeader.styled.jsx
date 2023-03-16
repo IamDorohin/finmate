@@ -29,15 +29,19 @@ export const SectionsHeaderAddButton = styled.button`
   padding: 0;
   width: 20px;
   height: 20px;
-  border: transparent;
+  border-color: transparent;
   border-radius: ${p => p.theme.radii.xs};
   background-color: ${p => p.theme.colors.balanceBackground};
   cursor: pointer;
+  border-style: solid;
 
-  /* :hover,
-  :focus {
-    border-color: ${p => p.theme.colors.hoverColor};
-  } */
+  transition: transform 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    border-color: ${p => p.theme.colors.iconColor};
+  }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     width: 26px;
