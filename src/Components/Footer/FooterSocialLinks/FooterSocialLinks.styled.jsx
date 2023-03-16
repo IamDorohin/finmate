@@ -58,12 +58,12 @@ export const FooterSocialLinksItems = styled.li`
 
 export const FooterSocialLink = styled.a`
   text-decoration: none;
-  /* color: ${p => p.theme.colors.logoBackground}; */
   color: ${p => p.theme.colors.iconColor};
+  transition: color 250ms ease-in-out;
 
   :hover,
   :focus {
-    color: ${p => p.theme.colors.hoverColor};
+    color: ${p => p.theme.colors.acentColor};
   }
 `;
 
@@ -73,7 +73,6 @@ export const FooterSocialLinksWrapper = styled.div`
   justify-content: center;
   height: 12px;
   width: 12px;
-  /* color: ${p => p.theme.colors.iconColor}; */
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 20px;

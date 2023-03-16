@@ -7,7 +7,6 @@ export const SectionsHeaderContainer = styled.div`
   padding: 4px 8px;
   padding-left: 8px;
   padding-right: 8px;
-  /* border: 1px solid black; */
   border: ${p => p.theme.borders.sectionsHeader};
   border-radius: ${p => p.theme.radii.m};
   background-color: transparent;
@@ -34,6 +33,11 @@ export const SectionsHeaderAddButton = styled.button`
   border-radius: ${p => p.theme.radii.xs};
   background-color: ${p => p.theme.colors.balanceBackground};
   cursor: pointer;
+
+  /* :hover,
+  :focus {
+    border-color: ${p => p.theme.colors.hoverColor};
+  } */
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     width: 26px;

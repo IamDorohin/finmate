@@ -8,6 +8,7 @@ export const BalanceSection = styled.section`
   background-color: ${props => props.theme.colors.primaryBackground};
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
+    position: relative;
     padding: 10px 15px;
     width: ${p => p.theme.breakpoints.mobileM};
   }

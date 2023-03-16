@@ -26,9 +26,10 @@ export const SectionItem = styled.li`
   color: ${p => p.theme.colors.itemsText};
   cursor: pointer;
 
-  :hover,
-  :focus {
-    color: ${p => p.theme.colors.hoverColor};
+  &:hover,
+  &:focus {
+    transform: scale(1.07);
+    transition: transform 250ms ease-in-out;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {

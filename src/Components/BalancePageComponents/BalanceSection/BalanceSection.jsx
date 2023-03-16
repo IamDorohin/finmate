@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import { deviceSelector } from 'Redux/selectors';
 import { RxBarChart } from 'react-icons/rx';
-import { UserContainer } from '../../UserContainer/UserContainer';
+import { UserProfileCard } from 'Components/UserProfileCard/UserProfileCard';
 import {
   BalanceSection,
   BalanceContainer,
@@ -16,6 +17,12 @@ import {
 
 export const HeroSection = () => {
   const smartPhoneDevice = useSelector(deviceSelector);
+
+  const [showSettings, setShowSettings] = useState(false);
+
+  const showSettingsHandler = () => {
+    setShowSettings(!showSettings);
+  };
 
   console.log('smartPhoneDevice', smartPhoneDevice);
 
@@ -36,7 +43,12 @@ export const HeroSection = () => {
             </BalanceChartContainer>
           )}
         </BalanceContainer>
-        {!smartPhoneDevice && <UserContainer />}
+        {!smartPhoneDevice && (
+          <UserProfileCard
+            onClick={showSettingsHandler}
+            settingsStatus={showSettings}
+          />
+        )}
       </FlexContainer>
     </BalanceSection>
   );

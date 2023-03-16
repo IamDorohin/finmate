@@ -47,15 +47,15 @@ export const UserNavItem = styled.li`
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: ${p => p.theme.radii.m};
-  /* color: #000; */
   border: 1px solid black;
+  transition: color 250ms ease-in-out;
 
   :not(:first-child) {
     margin-top: 10px;
   }
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     color: ${p => p.theme.colors.hoverColor};
   }
 
@@ -82,20 +82,26 @@ export const UserNavItem = styled.li`
 `;
 
 export const UserNavLink = styled(NavLink)`
+  position: relative;
+
   text-decoration: none;
-  color: inherit;
+  color: ${p => p.theme.colors.bwInverted};
   font-size: ${p => p.theme.fontSizes.sm};
 
-  ${props =>
-    props.status === 'false' &&
+  &:hover,
+  :focus {
+    color: ${p => p.theme.colors.hoverColor};
+  }
+
+  ${p =>
+    p.status === 'false' &&
     css`
-      color: grey;
+      color: ${p => p.theme.colors.bwInverted};
       pointer-events: none;
-      text-decoration: line-through;
     `}
 
   &.active {
-    color: ${p => p.theme.colors.activeLink};
+    color: ${p => p.theme.colors.acentColor};
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -108,5 +114,24 @@ export const UserNavLink = styled(NavLink)`
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
     font-size: ${p => p.theme.fontSizes.l};
+  }
+`;
+
+export const UserNavLinkDescription = styled.p`
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 15;
+  left: 0;
+  font-size: 9px;
+  color: ${p => p.theme.colors.acentColor};
+  visibility: hidden;
+  transform: translateY(-100%);
+
+  transition: visibility 250ms ease-in-out, transform 250ms ease-in-out;
+
+  ${UserNavItem}:hover & {
+    visibility: visible;
+    transform: translateY(0%);
   }
 `;

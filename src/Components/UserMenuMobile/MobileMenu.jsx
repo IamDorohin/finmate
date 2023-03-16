@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
 import { changeAppTheme } from 'Redux/Theme/Slice';
 import { AppLogo } from 'Components/AppLogo/AppLogo';
 import { ThemeSwitcher } from 'Components/Buttons/ThemeSwitcher/ThemeSwitcher';
@@ -12,10 +13,9 @@ import {
   MobileMenuHeader,
   MobileMenuButton,
 } from './MobileMenu.styled';
-import { SupportContact } from 'Components/Common/SupportContact/SupportContact';
 import { themeSelector } from 'Redux/selectors';
 import { VscChromeClose } from 'react-icons/vsc';
-import { UserContainer } from 'Components/UserContainer/UserContainer';
+import { UserProfileCard } from 'Components/UserProfileCard/UserProfileCard';
 
 const menuItemsContent = [
   { href: '/balance', text: 'Balance', status: 'true' },
@@ -26,6 +26,12 @@ const menuItemsContent = [
 export const MobileMenu = ({ onClick, onLinkClick, isOpenedModal }) => {
   const currentAppTheme = useSelector(themeSelector);
   const dispatch = useDispatch();
+
+  const [showSettings, setShowSettings] = useState(false);
+
+  const showSettingsHandler = () => {
+    setShowSettings(!showSettings);
+  };
 
   const themeChangeHandler = () => {
     if (currentAppTheme === 'light') {
@@ -57,8 +63,10 @@ export const MobileMenu = ({ onClick, onLinkClick, isOpenedModal }) => {
           </UserNavItem>
         ))}
       </UserNavList>
-      <UserContainer />
-      <SupportContact />
+      <UserProfileCard
+        onClick={showSettingsHandler}
+        settingsStatus={showSettings}
+      />
     </MobileMenuContainer>
   );
 };

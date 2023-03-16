@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SectionContainer = styled.section`
   padding: 10px 15px;
+  padding-top: 30px;
   margin-right: auto;
   margin-left: auto;
   background-color: ${props => props.theme.colors.primaryBackground};

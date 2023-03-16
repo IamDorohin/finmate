@@ -29,6 +29,3 @@ export const SectionsHeader = ({ data }) => {
     </SectionsHeaderContainer>
   );
 };
-
-// green
-// #124720
