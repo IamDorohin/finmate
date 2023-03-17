@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterSection = styled.footer`
-  display: flex;
-  height: 100px;
-  padding: 30px 15px 30px 15px;
+  padding: 15px 15px;
   margin-right: auto;
   margin-left: auto;
   background-color: ${props => props.theme.colors.primaryBackground};
@@ -25,12 +23,7 @@ export const FooterSection = styled.footer`
 `;
 
 export const FooterContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0 30px;
+  display: block;
 `;
 
 export const FooterSocialWrapper = styled.div``;

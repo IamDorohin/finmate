@@ -3,6 +3,19 @@ import styled from 'styled-components';
 
 export const FooterSocialLinksContainer = styled.div`
   position: relative;
+  padding-top: 10px;
+  padding-left: 10px;
+`;
+
+export const FooterSocialLinksDecor = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 30px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-top-left-radius: 10px;
 `;
 
 export const FooterSocialLinksTitle = styled.p`
@@ -25,28 +38,22 @@ export const FooterSocialLinksTitle = styled.p`
 `;
 
 export const FooterSocialLinksList = styled.ul`
-  position: absolute;
-  top: 20px;
-  left: 0;
-  list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin: 0;
   padding: 0;
 
-  transition: transform 250ms ease-in-out;
+  /* transition: transform 250ms ease-in-out;
 
   ${FooterSocialLinksContainer}:hover & {
     transform: scale(1.2);
-  }
+  } */
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    top: 24px;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    top: 30px;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
@@ -66,24 +73,13 @@ export const FooterSocialLinksItems = styled.li`
   border-radius: 50%;
 
   &:not(:first-child) {
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    height: 40px;
-    width: 40px;
-    &:not(:first-child) {
-      margin-left: 16px;
-    }
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    height: 50px;
-    width: 50px;
-
-    &:not(:first-child) {
-      margin-left: 18px;
-    }
   }
 `;
 

@@ -2,6 +2,7 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import { RxLinkedinLogo } from 'react-icons/rx';
 import {
   FooterSocialLinksContainer,
+  FooterSocialLinksDecor,
   FooterSocialLinksTitle,
   FooterSocialLinksList,
   FooterSocialLinksItems,
@@ -27,6 +28,7 @@ const socialLinksArray = [
 export const FooterSocialLinks = () => {
   return (
     <FooterSocialLinksContainer>
+      <FooterSocialLinksDecor />
       <FooterSocialLinksTitle>Developer social links</FooterSocialLinksTitle>
       <FooterSocialLinksList>
         {socialLinksArray.map(({ title, href, target, rel }) => (

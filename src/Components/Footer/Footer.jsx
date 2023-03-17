@@ -1,19 +1,19 @@
 import { FooterSocialLinks } from './FooterSocialLinks/FooterSocialLinks';
+import { FooterSubscribe } from './FooterSubscribe/FooterSubscribe';
 import { FooterSupport } from './FooterSupport/FooterSupport';
 import {
   FooterSection,
   FooterContainer,
-  FooterSocialWrapper,
+  // FooterSocialWrapper,
 } from './Footer.styled';
 
 export const Footer = () => {
   return (
     <FooterSection>
       <FooterContainer>
-        <FooterSocialWrapper>
-          <FooterSocialLinks />
-          <FooterSupport />
-        </FooterSocialWrapper>
+        <FooterSocialLinks />
+        <FooterSubscribe />
+        <FooterSupport />
       </FooterContainer>
     </FooterSection>
   );

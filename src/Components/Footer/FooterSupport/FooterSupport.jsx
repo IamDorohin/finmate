@@ -1,6 +1,7 @@
 import { FiMail } from 'react-icons/fi';
 import {
   FooterSupportContainer,
+  FooterSupportDecor,
   FooterSupportTitle,
   FooterSupportList,
   FooterSupportItem,
@@ -10,7 +11,7 @@ import {
 export const FooterSupport = () => {
   return (
     <FooterSupportContainer>
-      <FooterSupportTitle>Send mail to support</FooterSupportTitle>
+      <FooterSupportDecor />
       <FooterSupportList>
         <FooterSupportItem>
           <FooterSupportLink
@@ -22,6 +23,7 @@ export const FooterSupport = () => {
           </FooterSupportLink>
         </FooterSupportItem>
       </FooterSupportList>
+      <FooterSupportTitle>Send mail to support</FooterSupportTitle>
     </FooterSupportContainer>
   );
 };

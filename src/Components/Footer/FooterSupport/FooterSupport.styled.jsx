@@ -3,18 +3,29 @@ import styled from 'styled-components';
 
 export const FooterSupportContainer = styled.div`
   position: relative;
-  margin-top: 40px;
+  text-align: end;
+  padding-bottom: 10px;
+  padding-right: 10px;
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    margin-top: 57px;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    margin-top: 72px;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
   }
+`;
+
+export const FooterSupportDecor = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+  height: 30px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom-right-radius: 10px;
 `;
 
 export const FooterSupportTitle = styled.p`
@@ -37,28 +48,22 @@ export const FooterSupportTitle = styled.p`
 `;
 
 export const FooterSupportList = styled.ul`
-  position: absolute;
-  right: 0;
-  top: -31px;
-  list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   margin: 0;
   padding: 0;
 
-  transition: transform 250ms ease-in-out;
+  /* transition: transform 250ms ease-in-out;
 
   ${FooterSupportContainer}:hover & {
     transform: scale(1.2);
-  }
+  } */
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
-    top: -48px;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    top: -61px;
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.desktopL}) {
@@ -96,13 +101,13 @@ export const FooterSupportLink = styled(Link)`
   width: 12px;
   text-decoration: none;
   color: ${p => p.theme.colors.iconColor};
-  transition: color 250ms ease-in-out, transform 250ms ease-in-out;
+  /* transition: color 250ms ease-in-out, transform 250ms ease-in-out;
 
   :hover,
   :focus {
     color: ${p => p.theme.colors.acentColor};
     transform: scale(1.2);
-  }
+  } */
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
     height: 20px;
