@@ -10,11 +10,12 @@ export const ThemeSwitcherContainer = styled.div`
   width: 20px;
   height: 42px;
   background-color: ${p => p.theme.colors.switcherBackground};
-  transition: border-color 250ms ease-in-out;
+  transition: border-color 250ms ease-in-out, transform 250ms ease-in-out;
 
   :hover,
   :focus {
     border-color: ${p => p.theme.colors.themeSwitcerHoverColor};
+    transform: scale(1.2);
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {

@@ -44,12 +44,10 @@ export const UserNavItem = styled.li`
   margin-right: auto;
   width: 180px;
   height: 60px;
-  /* padding-top: 15px;
-  padding-bottom: 15px; */
   padding: 0;
   border-radius: ${p => p.theme.radii.m};
   border: 1px solid black;
-  transition: color 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 
   :not(:first-child) {
     margin-top: 10px;
@@ -57,7 +55,8 @@ export const UserNavItem = styled.li`
 
   &:hover,
   &:focus {
-    color: ${p => p.theme.colors.hoverColor};
+    /* color: ${p => p.theme.colors.hoverColor}; */
+    transform: scale(1.2);
   }
 
   @media screen and (min-width: ${p => p.theme.breakpoints.mobileM}) {
@@ -97,7 +96,7 @@ export const UserNavLink = styled(NavLink)`
 
   &:hover,
   :focus {
-    color: ${p => p.theme.colors.hoverColor};
+    /* color: ${p => p.theme.colors.hoverColor}; */
   }
 
   ${p =>

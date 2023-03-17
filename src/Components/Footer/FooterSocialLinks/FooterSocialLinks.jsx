@@ -1,4 +1,3 @@
-import { FiMail } from 'react-icons/fi';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { RxLinkedinLogo } from 'react-icons/rx';
 import {
@@ -12,20 +11,14 @@ import {
 
 const socialLinksArray = [
   {
-    title: 'mail',
-    href: 'mailto:iamdorohin@gmail.com',
+    title: 'linkedIn',
+    href: 'https://www.linkedin.com/in/iamdorohin/',
     target: '_blank',
     rel: 'noreferrer noopener',
   },
   {
     title: 'gitHub',
     href: 'https://github.com/IamDorohin',
-    target: '_blank',
-    rel: 'noreferrer noopener',
-  },
-  {
-    title: 'linkedIn',
-    href: 'https://www.linkedin.com/in/iamdorohin/',
     target: '_blank',
     rel: 'noreferrer noopener',
   },
@@ -40,9 +33,8 @@ export const FooterSocialLinks = () => {
           <FooterSocialLinksItems key={title}>
             <FooterSocialLink href={href} target={target} rel={rel}>
               <FooterSocialLinksWrapper>
-                {title === 'mail' && <FiMail size={'100%'} />}
-                {title === 'gitHub' && <AiOutlineGithub size={'100%'} />}
                 {title === 'linkedIn' && <RxLinkedinLogo size={'100%'} />}
+                {title === 'gitHub' && <AiOutlineGithub size={'100%'} />}
               </FooterSocialLinksWrapper>
             </FooterSocialLink>
           </FooterSocialLinksItems>
