@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { themeSelector } from 'Redux/selectors';
 import { changeDeviceType } from 'Redux/Device/slice';
+import { HomePage } from 'Pages/HomePage/HomePage';
 import { BalancePage } from 'Pages/BalancePage/BalancePage';
 import { BudgetPage } from 'Pages/BudgetPage/BudgetPage';
 import { ThemeProvider } from 'styled-components';
@@ -46,6 +47,7 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />}></Route>
           <Route path="/balance" element={<BalancePage />}></Route>
           <Route path="/budget" element={<BudgetPage />}></Route>
         </Route>
